@@ -17,12 +17,19 @@
     background-color: rgba(56, 126, 245, 1);
     cursor: pointer;
 }
+
 .no_padding {
     padding: 0;
 }
+
 .date_cell {
     padding: 5px;
 }
+
 .error_msg {
     color: #cc0000 !important;
+}
+
+.date_selected {
+    background-color: rgba(56, 126, 245, 1);
 }

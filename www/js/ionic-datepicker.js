@@ -70,6 +70,7 @@ angular.module('ionicDatePicker', [])
         scope.date_selection = { selected : false, selectedDate : '', submitted : false };
 
         scope.dateSelected = function (date) {
+          scope.selctedDateString = date.dateString;
           scope.date_selection.selected = true;
           scope.date_selection.selectedDate = new Date(date.dateString);
         };

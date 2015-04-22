@@ -2,6 +2,7 @@ angular.module('starter.controllers', [])
 
   .controller('DashCtrl', function ($scope, $ionicPopup) {
     $scope.currentDate = new Date();
+    $scope.pastDate = new Date(1521199764000);
   })
 
   .controller('ChatsCtrl', function ($scope, Chats) {

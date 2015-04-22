@@ -1,22 +1,11 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', function ($scope, $ionicPopup) {
+  .controller('DatePickerCtrl', function ($scope, $ionicPopup) {
     $scope.currentDate = new Date();
     $scope.pastDate = new Date(1521199764000);
   })
 
-  .controller('ChatsCtrl', function ($scope, Chats) {
-    $scope.chats = Chats.all();
-    $scope.remove = function (chat) {
-      Chats.remove(chat);
-    }
-  })
-
-  .controller('ChatDetailCtrl', function ($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
-  })
-
-  .controller('AccountCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope) {
     $scope.settings = {
       enableFriends: true
     };

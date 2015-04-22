@@ -21,21 +21,19 @@ This is still under development. Once i am done with the full implementation i w
 
 Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `index.html` file.
 
-    ````html
-    <link href="lib/ionic-datepicker/dist/style.css" rel="stylesheet">
- 
-    <!-- path to ionic/angularjs js -->
-    <script src="lib/ionic-datepicker/dist/templates.js"></script>
-    <script src="lib/ionic-datepicker/dist/ionic-timepicker.js"></script>
-    ````    
+````html
+<link href="lib/ionic-datepicker/dist/style.css" rel="stylesheet"> 
+<!-- path to ionic/angularjs js -->
+<script src="lib/ionic-datepicker/dist/templates.js"></script>
+<script src="lib/ionic-datepicker/dist/ionic-timepicker.js"></script>
+````    
     
 3) In your application module inject the dependency `ionic-timepicker`, in order to work with the ionic time picker
-    
-    ````javascript
-    angular.module('modulename', ['ionic', 'ionicDatePicker']){
-   
-    }
-    ````
+````javascript
+angular.module('modulename', ['ionic', 'ionicDatePicker']){
+ //
+}
+````
 
 4) Use the below format in your template's corresponding controller
 

@@ -1,6 +1,6 @@
-angular.module('ionicDatePicker', [])
+angular.module('ionic-datepicker', [])
 
-  .directive('ionicDatePicker', function ($ionicPopup) {
+  .directive('ionicDatepicker', function ($ionicPopup) {
     return {
       restrict: 'AE',
       replace: true,

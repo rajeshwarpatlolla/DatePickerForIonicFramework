@@ -28,9 +28,9 @@ Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `ind
 <script src="lib/ionic-datepicker/dist/ionic-timepicker.js"></script>
 ````    
     
-3) In your application module inject the dependency `ionic-timepicker`, in order to work with the ionic time picker
+3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
 ````javascript
-angular.module('modulename', ['ionic', 'ionicDatePicker']){
+angular.module('modulename', ['ionic', 'ionic-datepicker']){
  //
 }
 ````
@@ -44,13 +44,13 @@ $scope.currentDate = new Date();
 5) Then use the below format in your template / html file
 
 ````html
-<ionic-date-picker idate="currentDate" >    
-    {{slots.epochTime}}
-</ionic-date-picker>
+<ionic-datepicker idate="pastDate" >
+    <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}} </button>
+</ionic-datepicker>
 ````
 
 
-a) `ionic-date-picker` is the directive, to which we can pass required vales.
+a) `ionic-datepicker` is the directive, to which we can pass required vales.
 
 b) `idate` takes date object.
 

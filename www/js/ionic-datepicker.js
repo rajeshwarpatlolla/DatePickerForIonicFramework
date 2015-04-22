@@ -56,8 +56,8 @@ angular.module('ionicDatePicker', [])
         };
 
         scope.nextMonth = function () {
-          if (currentDate.getMonth() === 12) {
-            currentDate.setFullYear(currentDate.getFullYear() + 1);
+          if (currentDate.getMonth() === 11) {
+            currentDate.setFullYear(currentDate.getFullYear());
           }
           currentDate.setMonth(currentDate.getMonth() + 1);
 

@@ -12,9 +12,11 @@
     <div class="col" ng-repeat="weekName in weekNames track by $index" style="font-weight: bold"> {{ weekName }}</div>
   </div>
   <div style="height: 180px;">
-    <div class="row" ng-repeat="row in rows track by $index">
-      <div class="col" ng-repeat="col in cols track by $index">
-        <span class="" ng-click="dateSelected(dayList[$parent.$index * numColumns + $index])"> {{ dayList[$parent.$index * numColumns + $index].date }} </span>
+    <div class="row" ng-repeat="row in rows track by $index" style="text-align: center;">
+      <div class="col no_padding" ng-repeat="col in cols track by $index" ng-class="{'date_col': (dayList[$parent.$index * numColumns + $index].day != undefined) }">
+        <div class="date_cell" ng-click="dateSelected(dayList[$parent.$index * numColumns + $index])">
+          {{ dayList[$parent.$index * numColumns + $index].date }}
+        </div>
       </div>
     </div>
   </div>

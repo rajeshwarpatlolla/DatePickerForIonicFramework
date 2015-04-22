@@ -39,7 +39,6 @@ angular.module('ionicDatePicker', [])
           scope.currentYear = scope.currentDate.getFullYear();
 
           scope.numColumns = 7;
-//          scope.rows.length = Math.ceil(scope.dayList.length / scope.numColumns);
           scope.rows.length = 6;
           scope.cols.length = scope.numColumns;
 
@@ -76,7 +75,8 @@ angular.module('ionicDatePicker', [])
         };
 
         scope.dateSelected = function(date){
-          console.log(date);
+          scope.currentDate = new Date(date.dateString);
+          console.log(scope.currentDate);
         };
 
         element.on("click", function () {

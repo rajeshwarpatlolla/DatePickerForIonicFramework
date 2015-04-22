@@ -23,3 +23,6 @@
 .date_cell {
     padding: 5px;
 }
+.error_msg {
+    color: #cc0000 !important;
+}

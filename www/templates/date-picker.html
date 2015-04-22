@@ -1,25 +1,14 @@
-<div class="row">
-  <div class="col col-10">
-    <button class="button-clear color_blue" ng-click="prevMonth()"><i class="icon ion-chevron-left"></i></button>
-  </div>
-  <div class="col col-80 text-center">{{currentMonth}} - {{currentYear}}</div>
-  <div class="col col-10">
-    <button class="button-clear color_blue" ng-click="nextMonth()"><i class="icon ion-chevron-right"></i></button>
-  </div>
-</div>
-<div class="">
-  <div class="row">
-    <div class="col" ng-repeat="weekName in weekNames track by $index" style="font-weight: bold"> {{ weekName }}</div>
-  </div>
-  <div style="height: 180px;">
-    <div class="row" ng-repeat="row in rows track by $index" style="text-align: center;">
-      <div class="col no_padding" ng-repeat="col in cols track by $index"
-           ng-class="{'date_col': (dayList[$parent.$index * numColumns + $index].day != undefined) }">
-        <div class="date_cell" ng-click="dateSelected(dayList[$parent.$index * numColumns + $index])">
-          {{ dayList[$parent.$index * numColumns + $index].date }}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="error_msg" ng-show="date_selection.submitted === true && date_selection.selected === false"> Date not selected. Please select a date.</div>
+<ion-view view-title="Date Picker">
+  <ion-content class="padding">
+
+    <h3 class="text-center">Date Picker Examples</h3>
+    <h4>Example 1</h4>
+    <button class="button button-block button-positive"
+            ionic-date-picker="" idate="currentDate" >{{currentDate | date:'dd - MMMM - yyyy'}}</button>
+
+    <h4>Example 2</h4>
+    <button class="button button-block button-positive"
+            ionic-date-picker="" idate="pastDate" >{{pastDate | date:'dd - MMMM - yyyy'}}</button>
+
+  </ion-content>
+</ion-view>

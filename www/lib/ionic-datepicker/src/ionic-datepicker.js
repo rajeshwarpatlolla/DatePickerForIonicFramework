@@ -1,6 +1,10 @@
-angular.module('ionic-datepicker', [])
+//By Rajeshwar Patlolla
+//https://github.com/rajeshwarpatlolla
 
-  .directive('ionicDatepicker', function ($ionicPopup) {
+"use strict";
+angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates'])
+
+  .directive('ionicDatepicker', ['$ionicPopup', function ($ionicPopup) {
     return {
       restrict: 'AE',
       replace: true,
@@ -79,7 +83,7 @@ angular.module('ionic-datepicker', [])
           refreshDateList(angular.copy(scope.ipDate));
 
           $ionicPopup.show({
-            templateUrl: 'templates/date-picker-modal.html',
+            templateUrl: 'date-picker-modal.html',
             title: '<strong>Select Date</strong>',
             subTitle: '',
             scope: scope,
@@ -104,4 +108,4 @@ angular.module('ionic-datepicker', [])
         })
       }
     }
-  });
+  }]);

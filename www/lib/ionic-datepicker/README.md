@@ -1,6 +1,6 @@
 ##Introduction:
 
-This is a sample application to demonstrate `ionic-datepicker` bower component which can be used with any Ionic framework's application.
+This is a `ionic-datepicker` bower component which can be used with any Ionic framework's application.
 
 [View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo") 
 
@@ -16,8 +16,7 @@ This is a sample application to demonstrate `ionic-datepicker` bower component w
     bower install ionic-datepicker --save
     
 2) Then you can see the following directory structure see in your project folder
-
-![Directory structure](https://lh3.googleusercontent.com/w4DYhgBZLu3Y31HWXY9tbJbv1dMdQiQPDs5zwidQafE=w112-h207-p-no "Directory structure")
+   
 
 Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `index.html` file.
 
@@ -28,7 +27,7 @@ Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `ind
 <script src="lib/ionic-datepicker/dist/ionic-datepicker.js"></script>
 ````    
     
-3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
+3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic date picker
 ````javascript
 angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
  //
@@ -45,7 +44,7 @@ $scope.currentDate = new Date();
 
 ````html
 <ionic-datepicker idate="currentDate" >
-    <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}} </button>
+    <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}} </button>
 </ionic-datepicker>
 ````
 
@@ -56,16 +55,7 @@ b) `idate` takes date object.
 
 Tested with `angular#1.3.6` and `ionic#1.0.0-rc.4`. 
 
-##Screen Shots:
-
-Once you are successfully done with the above steps, you should be able to see the below screen shots.
-I have used two buttons here. 
-
-The first screen shot shows only the buttons before clicking on them.
-Once you click on the button you should see the second screen shot.
  
-![Date picker buttons](https://lh3.googleusercontent.com/FX5eO7bgWExEluK9raIdBAo7j7C8PJY84wVWrO3v1sA=w114-h207-p-no "Date picker buttons") 
-![Date picker modal](https://lh3.googleusercontent.com/y_bA7sjRBZo-6yaoG55cTFa2G0QahSrcTwCSoCl8C3U=w114-h207-p-no "Date picker modal")
 ##Versions:
 
 ### 1) v0.1.0

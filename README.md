@@ -17,7 +17,7 @@ This is a sample application to demonstrate `ionic-datepicker` bower component w
     
 2) Then you can see the following directory structure see in your project folder
 
-![Directory structure](https://lh3.googleusercontent.com/w4DYhgBZLu3Y31HWXY9tbJbv1dMdQiQPDs5zwidQafE=w112-h207-p-no "Directory structure")
+![Directory structure](https://lh3.googleusercontent.com/8x3OByTXzzgJSxm-n5Yg8-0g-u2OZt18j9EbvNTgK3Q=w112-h207-p-no "Directory structure")
 
 Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `index.html` file.
 
@@ -64,8 +64,8 @@ I have used two buttons here.
 The first screen shot shows only the buttons before clicking on them.
 Once you click on the button you should see the second screen shot.
  
-![Date picker buttons](https://lh3.googleusercontent.com/FX5eO7bgWExEluK9raIdBAo7j7C8PJY84wVWrO3v1sA=w114-h207-p-no "Date picker buttons") 
-![Date picker modal](https://lh3.googleusercontent.com/y_bA7sjRBZo-6yaoG55cTFa2G0QahSrcTwCSoCl8C3U=w114-h207-p-no "Date picker modal")
+![Date picker buttons](https://lh3.googleusercontent.com/YYlyw-ozro_rq9QB7hB1OzGKxo4kJpeGpXFo0ZgxF24=w117-h207-p-no "Date picker buttons") 
+![Date picker modal](https://lh3.googleusercontent.com/GZPl7o0dx_Vp7lQB2IX35eM0u3wkK3bvSQw7mH3I5uY=w116-h207-p-no "Date picker modal")
 ##Versions:
 
 ### 1) v0.1.0

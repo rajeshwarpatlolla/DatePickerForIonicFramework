@@ -1,6 +1,10 @@
-angular.module('ionicDatePicker', [])
+//By Rajeshwar Patlolla
+//https://github.com/rajeshwarpatlolla
 
-  .directive('ionicDatePicker', function ($ionicPopup) {
+"use strict";
+angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates'])
+
+  .directive('ionicDatepicker', ['$ionicPopup', function ($ionicPopup) {
     return {
       restrict: 'AE',
       replace: true,
@@ -15,6 +19,8 @@ angular.module('ionicDatePicker', [])
         scope.weekNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
         var refreshDateList = function (current_date) {
+          currentDate = angular.copy(current_date);
+
           var firstDay = new Date(current_date.getFullYear(), current_date.getMonth(), 1).getDate();
           var lastDay = new Date(current_date.getFullYear(), current_date.getMonth() + 1, 0).getDate();
 
@@ -79,7 +85,7 @@ angular.module('ionicDatePicker', [])
           refreshDateList(angular.copy(scope.ipDate));
 
           $ionicPopup.show({
-            templateUrl: 'templates/date-picker-modal.html',
+            templateUrl: 'date-picker-modal.html',
             title: '<strong>Select Date</strong>',
             subTitle: '',
             scope: scope,
@@ -89,7 +95,6 @@ angular.module('ionicDatePicker', [])
                 text: 'Set',
                 type: 'button-positive',
                 onTap: function (e) {
-
                   scope.date_selection.submitted = true;
 
                   if (scope.date_selection.selected === true) {
@@ -104,4 +109,4 @@ angular.module('ionicDatePicker', [])
         })
       }
     }
-  });
+  }]);

@@ -3,12 +3,14 @@
 
     <h3 class="text-center">Date Picker Examples</h3>
     <h4>Example 1</h4>
-    <button class="button button-block button-positive"
-            ionic-date-picker="" idate="currentDate" >{{currentDate | date:'dd - MMMM - yyyy'}}</button>
+    <ionic-datepicker idate="currentDate" >
+      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}} </button>
+    </ionic-datepicker>
 
     <h4>Example 2</h4>
-    <button class="button button-block button-positive"
-            ionic-date-picker="" idate="pastDate" >{{pastDate | date:'dd - MMMM - yyyy'}}</button>
+      <ionic-datepicker idate="pastDate" >
+        <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}} </button>
+      </ionic-datepicker>
 
   </ion-content>
 </ion-view>

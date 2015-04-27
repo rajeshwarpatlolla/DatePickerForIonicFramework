@@ -18,6 +18,12 @@ angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates'])
         var currentDate = angular.copy(scope.ipDate);
         scope.weekNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
+        scope.today = {};
+        scope.today.dateObj = new Date();
+        scope.today.date = (new Date()).getDate();
+        scope.today.month = (new Date()).getMonth();
+        scope.today.year = (new Date()).getFullYear();
+
         var refreshDateList = function (current_date) {
           currentDate = angular.copy(current_date);
 
@@ -82,7 +88,12 @@ angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates'])
         };
 
         element.on("click", function () {
-          refreshDateList(angular.copy(scope.ipDate));
+          if(!scope.ipDate){
+            var defaultDate = new Date();
+            refreshDateList(defaultDate);
+          } else {
+            refreshDateList(angular.copy(scope.ipDate));
+          }
 
           $ionicPopup.show({
             templateUrl: 'date-picker-modal.html',
@@ -90,7 +101,13 @@ angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates'])
             subTitle: '',
             scope: scope,
             buttons: [
-              { text: 'Cancel' },
+              { text: 'Close' },
+              { text: 'Today',
+                onTap: function (e) {
+                  refreshDateList(new Date());
+                  e.preventDefault();
+                }
+              },
               {
                 text: 'Set',
                 type: 'button-positive',

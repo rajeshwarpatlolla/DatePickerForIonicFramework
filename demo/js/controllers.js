@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
   .controller('DatePickerCtrl', function ($scope, $ionicPopup) {
-//    $scope.currentDate = new Date();
+    $scope.currentDate = new Date();
     $scope.pastDate = new Date(1521199764000);
   })
 

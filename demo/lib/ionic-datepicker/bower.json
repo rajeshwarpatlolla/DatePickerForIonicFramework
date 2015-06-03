@@ -1,6 +1,6 @@
 {
   "name": "ionic-datepicker",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
@@ -27,6 +27,6 @@
     "tests"
   ],
   "dependencies": {
-    "ionic": "~0.9.27"
+    "ionic": ">=0.9.27"
   }
 }

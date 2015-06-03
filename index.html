@@ -26,79 +26,13 @@
 
 <p><a href="http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/" title="Demo">View Demo</a> </p>
 
-<h2>
-<a id="prerequisites" class="anchor" href="#prerequisites" aria-hidden="true"><span class="octicon octicon-link"></span></a>Prerequisites.</h2>
-
-<p>1) node.js, bower and gulp.</p>
-
-<h2>
-<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to use:</h2>
-
-<p>1) In your project repository install the ionic date picker using bower</p>
-
-<pre><code>bower install ionic-datepicker --save
-</code></pre>
-
-<p>2) Then you can see the following directory structure see in your project folder</p>
-
-<p><img src="https://lh3.googleusercontent.com/8x3OByTXzzgJSxm-n5Yg8-0g-u2OZt18j9EbvNTgK3Q=w112-h207-p-no" alt="Directory structure" title="Directory structure"></p>
-
-<p>Give the path of  <code>style.css, templates.js and ionic-datepicker.js</code> in your <code>index.html</code> file.</p>
-
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">link</span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>lib/ionic-datepicker/dist/style.css<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span>&gt; 
-<span class="pl-c">&lt;!-- path to ionic/angularjs js --&gt;</span>
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>lib/ionic-datepicker/dist/templates.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;
-&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>lib/ionic-datepicker/dist/ionic-datepicker.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
-
-<p>3) In your application module inject the dependency <code>ionic-datepicker</code>, in order to work with the ionic time picker</p>
-
-<div class="highlight highlight-javascript"><pre>angular.module(<span class="pl-s"><span class="pl-pds">'</span>mainModuleName<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>ionic<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>ionic-datepicker<span class="pl-pds">'</span></span>]){
- <span class="pl-c">//</span>
-}</pre></div>
-
-<p>4) Use the below format in your template's corresponding controller</p>
-
-<div class="highlight highlight-javascript"><pre>$scope.currentDate <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Date</span>();</pre></div>
-
-<p>5) Then use the below format in your template / html file</p>
-
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">ionic</span><span class="pl-e">-datepicker</span> <span class="pl-e">idate</span>=<span class="pl-s"><span class="pl-pds">"</span>currentDate<span class="pl-pds">"</span></span> &gt;
-    &lt;<span class="pl-ent">button</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>button button-block button-positive<span class="pl-pds">"</span></span>&gt; {{pastDate | date:'dd - MMMM - yyyy'}} &lt;/<span class="pl-ent">button</span>&gt;
-&lt;/<span class="pl-ent">ionic</span><span class="pl-e">-datepicker</span>&gt;</pre></div>
-
-<p>a) <code>ionic-datepicker</code> is the directive, to which we can pass required vales.</p>
-
-<p>b) <code>idate</code> takes date object.</p>
-
-<p>Tested with <code>angular#1.3.6</code> and <code>ionic#1.0.0-rc.4</code>. </p>
+<p>Please check the <a href="https://github.com/rajeshwarpatlolla/ionic-datepicker">ionic-datepicker</a> bower component for more details.</p>
 
 <h2>
 <a id="screen-shots" class="anchor" href="#screen-shots" aria-hidden="true"><span class="octicon octicon-link"></span></a>Screen Shots:</h2>
 
-<p>Once you are successfully done with the above steps, you should be able to see the below screen shots.
-I have used two buttons here. </p>
-
-<p>The first screen shot shows only the buttons before clicking on them.
-Once you click on the button you should see the second screen shot.</p>
-
 <p><img src="https://lh3.googleusercontent.com/YYlyw-ozro_rq9QB7hB1OzGKxo4kJpeGpXFo0ZgxF24=w117-h207-p-no" alt="Date picker buttons" title="Date picker buttons"> 
 <img src="https://lh3.googleusercontent.com/GZPl7o0dx_Vp7lQB2IX35eM0u3wkK3bvSQw7mH3I5uY=w116-h207-p-no" alt="Date picker modal" title="Date picker modal"></p>
-
-<h2>
-<a id="versions" class="anchor" href="#versions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Versions:</h2>
-
-<h3>
-<a id="1-v010" class="anchor" href="#1-v010" aria-hidden="true"><span class="octicon octicon-link"></span></a>1) v0.1.0</h3>
-
-<p>The whole date picker functionality has been implemented, and can be installed with </p>
-
-<pre><code>bower install ionic-datepicker --save
-</code></pre>
-
-<h2>
-<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License:</h2>
-
-<p>MIT</p>
 
 <h2>
 <a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact:</h2>
@@ -110,8 +44,6 @@ Once you click on the button you should see the second screen shot.</p>
 <p>twitter : <a href="https://twitter.com/rajeshwar_9032">https://twitter.com/rajeshwar_9032</a></p>
 
 <p>facebook : <a href="https://www.facebook.com/rajeshwarpatlolla">https://www.facebook.com/rajeshwarpatlolla</a></p>
-
-<p>paypal : <a href="mailto:rajeshwar.patlolla@gmail.com">rajeshwar.patlolla@gmail.com</a></p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/rajeshwarpatlolla/DatePickerForIonicFramework">Datepickerforionicframework</a> is maintained by <a href="https://github.com/rajeshwarpatlolla">rajeshwarpatlolla</a>.</span>

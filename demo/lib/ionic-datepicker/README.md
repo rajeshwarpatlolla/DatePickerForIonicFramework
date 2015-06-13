@@ -11,9 +11,11 @@ This is a `ionic-datepicker` bower component which can be used with any Ionic fr
 
 ##How to use:
 
-1) In your project repository install the ionic date picker using bower
+1) In your project repository install the ionic-datepicker using bower
 
     bower install ionic-datepicker --save
+
+This will install the latest version released.
     
 2) Then you can see the following directory structure see in your project folder
 
@@ -79,8 +81,8 @@ I have used two buttons here.
 The first screen shot shows only the buttons before clicking on them.
 Once you click on the button you should see the second screen shot.
  
-![Date picker buttons](https://lh3.googleusercontent.com/YYlyw-ozro_rq9QB7hB1OzGKxo4kJpeGpXFo0ZgxF24=w117-h207-p-no "Date picker buttons") 
-![Date picker modal](https://lh3.googleusercontent.com/GZPl7o0dx_Vp7lQB2IX35eM0u3wkK3bvSQw7mH3I5uY=w116-h207-p-no "Date picker modal")
+![Date picker buttons](https://lh3.googleusercontent.com/-uhIkYlbcuqsZZneSPOwFoePWvhTeqRKa2kVkwN7mMI=w305-h553-no "Date picker buttons") 
+![Date picker modal](https://lh3.googleusercontent.com/7iEejIcpprFmpgwWvs240Vn9Dn_Dh-R5HgtC_CJVZMs=w305-h553-no "Date picker modal")
 ##Versions:
 
 ### 1) v0.1.0
@@ -95,6 +97,7 @@ Bug Fix. If we don't pass the date to the time picker it will pick the todays da
 Disabling previous dates functionality added.
 ### 6) v0.3.0
 a) User can select the years and months using the dropdown.
+
 b) A callback function is added.
 
 ##License:

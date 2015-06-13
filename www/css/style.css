@@ -1,2 +1,6 @@
 /* Empty. Add your own CSS if you like */
 
+.contact a {
+	font-size: 14px;
+	white-space: normal;
+}

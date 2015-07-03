@@ -1,9 +1,10 @@
 {
   "name": "ionic-datepicker",
+  "version": "0.4.0",
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
-  "description": "A date picker component for ionic framework applications",
+  "description": "A date picker component for ionic framework",
   "main": [
     "./dist/templates.js",
     "./dist/ionic-datepicker.js",
@@ -28,14 +29,14 @@
   "dependencies": {
     "ionic": ">=0.9.27"
   },
-  "_release": "29c449d114",
+  "_release": "0.4.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "29c449d114ab8d4aee7454e4af97754a0923b011"
+    "type": "version",
+    "tag": "v0.4.0",
+    "commit": "04f9001cd08a586ace7a8541589b3287ee1207ea"
   },
   "_source": "git://github.com/rajeshwarpatlolla/ionic-datepicker.git",
-  "_target": "master",
+  "_target": "~0.4.0",
   "_originalSource": "ionic-datepicker",
   "_direct": true
 }

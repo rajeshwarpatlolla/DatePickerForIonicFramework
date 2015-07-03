@@ -4,13 +4,20 @@
     <h3 class="text-center">Date Picker Examples</h3>
     <h4>Example 1</h4>
     <ionic-datepicker idate="currentDate" disablepreviousdates="true" callback="datePickerCallback">
-      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}} </button>
+      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}}</button>
     </ionic-datepicker>
 
+
     <h4>Example 2</h4>
-      <ionic-datepicker idate="pastDate" callback="datePickerCallback">
-        <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}} </button>
-      </ionic-datepicker>
+    <ionic-datepicker idate="currentDate" disablefuturedates="true" callback="datePickerCallback">
+      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}}</button>
+    </ionic-datepicker>
+
+    <h4>Datepicker with custom title</h4>
+    <ionic-datepicker idate="pastDate" callback="datePickerCallback" title="title">
+      <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}}</button>
+    </ionic-datepicker>
+
 
   </ion-content>
 </ion-view>

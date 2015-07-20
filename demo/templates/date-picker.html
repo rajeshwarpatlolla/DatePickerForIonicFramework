@@ -18,6 +18,11 @@
       <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}}</button>
     </ionic-datepicker>
 
+    <h4>Date picker with particular disabled dates.</h4>
+    <ionic-datepicker idate="augMonth" callback="datePickerCallback" title="title" disableddates="disabledDates">
+      <button class="button button-block button-positive"> {{augMonth | date:'dd - MMMM - yyyy'}}</button>
+    </ionic-datepicker>
+
 
   </ion-content>
 </ion-view>

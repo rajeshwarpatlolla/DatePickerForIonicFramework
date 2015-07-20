@@ -40,7 +40,8 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
       disablePreviousDates: '=disablepreviousdates',
       disableFutureDates: '=disablefuturedates',
       callback: '=callback',
-      title: '=title'
+      title: '=title',
+      disabledDates: '=?disableddates'
     },
     link: function (scope, element, attrs) {
 
@@ -55,6 +56,14 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
 
       if (!scope.ipDate) {
         scope.ipDate = new Date();
+      }
+
+      if (!angular.isDefined(scope.disabledDates)) {
+        scope.disabledDates = [];
+      } else {
+        for (var i = 0; i < scope.disabledDates.length; i++) {
+          scope.disabledDates[i] = scope.disabledDates[i].getTime();
+        }
       }
 
       scope.previousDayEpoch = (+(new Date()) - 86400000);

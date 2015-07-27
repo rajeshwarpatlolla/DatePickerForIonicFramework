@@ -22,6 +22,10 @@
     <ionic-datepicker idate="augMonth" callback="datePickerCallback" title="title" disableddates="disabledDates">
       <button class="button button-block button-positive"> {{augMonth | date:'dd - MMMM - yyyy'}}</button>
     </ionic-datepicker>
+    <h4>Date picker with Monday as the first day of the week.</h4>
+    <ionic-datepicker idate="augMonth" callback="datePickerCallback" title="title" mondayfirst="true">
+      <button class="button button-block button-positive"> {{augMonth | date:'dd - MMMM - yyyy'}}</button>
+    </ionic-datepicker>
 
 
   </ion-content>

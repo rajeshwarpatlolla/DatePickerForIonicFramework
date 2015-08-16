@@ -2,7 +2,7 @@
 //https://github.com/rajeshwarpatlolla
 
 "use strict";
-var app = angular.module('ionic-datepicker', ['ionic', 'ionic-datepicker.templates']);
+var app = angular.module('ionic-datepicker', ['ionic']);
 
 app.service('DatepickerService', function () {
 
@@ -36,45 +36,76 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
     restrict: 'AE',
     replace: true,
     scope: {
-      ipDate: '=idate',
-      disablePreviousDates: '=disablepreviousdates',
-      disableFutureDates: '=disablefuturedates',
-      callback: '=callback',
-      title: '=title',
-      disabledDates: '=?disableddates',
-      mondayFirst: '=?mondayfirst'
+      inputObj: "=inputObj"
     },
     link: function (scope, element, attrs) {
 
-      scope.datePickerTitle = scope.title || 'Select Date';
-
-      var monthsList = DatepickerService.monthsList;
-      scope.monthsList = monthsList;
-      scope.yearsList = DatepickerService.yearsList;
-
       scope.currentMonth = '';
       scope.currentYear = '';
+      scope.disabledDates = [];
 
-      if (!scope.ipDate) {
+      //Setting the title, today, close and set strings for the date picker
+      scope.titleLabel = scope.inputObj.titleLabel ? (scope.inputObj.titleLabel) : 'Select Date';
+      scope.todayLabel = scope.inputObj.todayLabel ? (scope.inputObj.todayLabel) : 'Today';
+      scope.closeLabel = scope.inputObj.closeLabel ? (scope.inputObj.closeLabel) : 'Close';
+      scope.setLabel = scope.inputObj.setLabel ? (scope.inputObj.setLabel) : 'Set';
+      scope.errorMsgLabel = scope.inputObj.errorMsgLabel ? (scope.inputObj.errorMsgLabel) : 'Please select some time.';
+
+      scope.enableDatesFrom = {epoch: 0, isSet: false};
+      scope.enableDatesTo = {epoch: 0, isSet: false};
+
+      //Setting the from and to dates
+      if (scope.inputObj.from) {
+        scope.enableDatesFrom.isSet = true;
+        var fromDates = scope.inputObj.from.split(/[/-]+/);
+        scope.enableDatesFrom.epoch = new Date(fromDates[2], fromDates[0] - 1, fromDates[1]).getTime();
+      }
+
+      if (scope.inputObj.to) {
+        scope.enableDatesTo.isSet = true;
+        var toDates = scope.inputObj.to.split(/[/-]+/);
+        scope.enableDatesTo.epoch = new Date(toDates[2], toDates[0] - 1, toDates[1]).getTime();
+      }
+
+      //Setting the input date for the date picker
+      if (scope.inputObj.inputDate) {
+        scope.ipDate = scope.inputObj.inputDate;
+      } else {
         scope.ipDate = new Date();
       }
 
-      if (!angular.isDefined(scope.mondayFirst) || scope.mondayFirst == "false") {
-        scope.mondayFirst = false;
+      scope.selectedDateFull = scope.ipDate;
+
+      //Setting the months list. This is useful, if the component needs to use some other language.
+      var monthsList = [];
+      if (scope.inputObj.monthList.length === 12) {
+        monthsList = scope.inputObj.monthList;
       } else {
+        monthsList = DatepickerService.monthsList;
+      }
+      scope.monthsList = monthsList;
+      scope.yearsList = DatepickerService.yearsList;
+
+      //Setting whether to show Monday as the first day of the week or not.
+      if (scope.inputObj.mondayFirst) {
         scope.mondayFirst = true;
+      } else {
+        scope.mondayFirst = false;
       }
 
-      if (!angular.isDefined(scope.disabledDates)) {
+      //Setting the disabled dates list.
+      if (scope.inputObj.disabledDates.length == 0) {
         scope.disabledDates = [];
       } else {
-        for (var i = 0; i < scope.disabledDates.length; i++) {
-          scope.disabledDates[i] = scope.disabledDates[i].getTime();
-        }
-      }
+        angular.forEach(scope.inputObj.disabledDates, function (val, key) {
+          val.setHours(0);
+          val.setMinutes(0);
+          val.setSeconds(0);
+          val.setMilliseconds(0);
 
-      scope.previousDayEpoch = (+(new Date()) - 86400000);
-      scope.nextDayEpoch = (+(new Date()));
+          scope.disabledDates.push(val.getTime());
+        });
+      }
 
       var currentDate = angular.copy(scope.ipDate);
       currentDate.setHours(0);
@@ -132,7 +163,7 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
           });
         }
 
-        //var firstDay = scope.dayList[0].day;
+        //To set Monday as the first day of the week.
         var firstDay = scope.dayList[0].day - scope.mondayFirst;
 
         scope.currentMonthFirstDayEpoch = scope.dayList[0].epochLocal;
@@ -189,12 +220,15 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
       };
 
       scope.date_selection = {selected: false, selectedDate: '', submitted: false};
+      scope.date_selection.selected = true;
+      scope.date_selection.selectedDate = scope.ipDate;
 
       scope.dateSelected = function (date) {
         scope.selctedDateString = date.dateString;
         scope.selctedDateStringCopy = angular.copy(scope.selctedDateString);
         scope.date_selection.selected = true;
         scope.date_selection.selectedDate = new Date(date.dateString);
+        scope.selectedDateFull = scope.date_selection.selectedDate;
       };
 
       element.on("click", function () {
@@ -206,19 +240,19 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
         }
 
         $ionicPopup.show({
-          templateUrl: 'date-picker-modal.html',
-          title: scope.datePickerTitle,
+          templateUrl: 'lib/ionic-datepicker/src/date-picker-modal.html',
+          title: scope.titleLabel,
           subTitle: '',
           scope: scope,
           buttons: [
             {
-              text: 'Close',
+              text: scope.closeLabel,
               onTap: function (e) {
-                scope.callback(undefined);
+                scope.inputObj.callback(undefined);
               }
             },
             {
-              text: 'Today',
+              text: scope.todayLabel,
               onTap: function (e) {
 
                 var today = new Date();
@@ -246,14 +280,13 @@ app.directive('ionicDatepicker', ['$ionicPopup', 'DatepickerService', function (
               }
             },
             {
-              text: 'Set',
+              text: scope.setLabel,
               type: 'button-positive',
               onTap: function (e) {
                 scope.date_selection.submitted = true;
 
                 if (scope.date_selection.selected === true) {
-                  scope.ipDate = angular.copy(scope.date_selection.selectedDate);
-                  scope.callback(scope.ipDate);
+                  scope.inputObj.callback(scope.date_selection.selectedDate);
                 } else {
                   e.preventDefault();
                 }

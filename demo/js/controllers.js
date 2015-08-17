@@ -1,28 +1,41 @@
 angular.module('starter.controllers', [])
 
   .controller('DatePickerCtrl', function ($scope, $ionicPopup) {
-    $scope.currentDate = new Date();
-    $scope.pastDate = new Date(1521199764000);
-    $scope.title = 'Custom Title';
-    $scope.augMonth = new Date(1440052709000);
 
-    $scope.disabledDates = [
+    var disabledDates = [
       new Date(1437719836326),
-      new Date(2015,7,10), //months are 0-based, this is August, 10th!
+      new Date(),
+      new Date(2015, 7, 10), //months are 0-based, this is August, 10th!
       new Date('Wednesday, August 12, 2015'), //Works with any valid Date formats like long format
       new Date("08-14-2015"), //Short format
       new Date(1439676000000) //UNIX format
     ];
+    var monthList = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
 
-    $scope.datePickerCallback = function (val) {
-      console.log('ionic-datepicker callback');
+    $scope.datepickerObject = {
+      titleLabel: 'Title',
+      todayLabel: 'Today',
+      closeLabel: 'Close',
+      setLabel: 'Set',
+      errorMsgLabel : 'Please select time.',
+      setButtonType : 'button-assertive',
+      inputDate: new Date(),
+      mondayFirst: true,
+      disabledDates:disabledDates,
+      monthList:monthList,
+      from: new Date(2015, 7, 2),
+      to: new Date(2015, 7, 29),
+      callback: function (val) {
+        datePickerCallback(val);
+      }
+    };
 
+    var datePickerCallback = function (val) {
       if (typeof(val) === 'undefined') {
         console.log('No date selected');
       } else {
         console.log('Selected date is : ', val)
       }
-
     };
 
   })

@@ -1,6 +1,6 @@
 ##Introduction:
 
-This is an `ionic-datepicker` bower component, which can be used in any Ionic framework's application.
+This is an `ionic-datepicker` bower component, which can be used in any Ionic framework's application. No additional plugins required for this component.
 
 [View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo") 
 
@@ -13,22 +13,19 @@ This is an `ionic-datepicker` bower component, which can be used in any Ionic fr
 
 1) In your project repository install the ionic-datepicker using bower
 
-bower install ionic-datepicker --save
+`bower install ionic-datepicker --save`
+*OR*
+`npm i ionic-datepicker --save`
 
 This will install the latest version released.
 
-2) Then you can see the following directory structure see in your project folder
-
-![Directory structure](https://lh3.googleusercontent.com/8x3OByTXzzgJSxm-n5Yg8-0g-u2OZt18j9EbvNTgK3Q=w112-h207-p-no "Directory structure")
-
-Give the path of  `style.css, templates.js and ionic-datepicker.js` in your `index.html` file.
+2) Give the path of  `ionic-datepicker.bundle.min.js` in your `index.html` file.
 
 ````html
-<link href="lib/ionic-datepicker/dist/style.css" rel="stylesheet"> 
-<!-- path to ionic/angularjs js -->
-<script src="lib/ionic-datepicker/dist/templates.js"></script>
-<script src="lib/ionic-datepicker/dist/ionic-datepicker.js"></script>
+<!-- path to ionic/angularjs -->
+<script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
 ````    
+The path will change if you have installed with npm.
 
 3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
 ````javascript
@@ -40,59 +37,90 @@ angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
 4) Use the below format in your template's corresponding controller
 
 ````javascript
-$scope.currentDate = new Date();
-$scope.title = "Custom Title";
-
-$scope.datePickerCallback = function (val) {
-	if(typeof(val)==='undefined'){		
-		console.log('Date not selected');
-	}else{
-		console.log('Selected date is : ', val);
-	}
-};
+    $scope.datepickerObject = {
+      titleLabel: 'Title',	//Optional
+      todayLabel: 'Today',	//Optional
+      closeLabel: 'Close',	//Optional
+      setLabel: 'Set',	//Optional
+      errorMsgLabel : 'Please select time.',	//Optional
+      setButtonType : 'button-assertive',  //Optional
+      inputDate: new Date(),	//Optional
+      mondayFirst: true,	//Optional
+      disabledDates:disabledDates,	//Optional
+      monthList:monthList,	//Optional
+      from: new Date(2015, 7, 2),	//Optional
+      to: new Date(2015, 7, 29),	//Optional
+      callback: function (val) {	//Mandatory
+        datePickerCallback(val);
+      }
+    };
 ````
 
-a) `currentDate` is the date object which we are passing to the `ionic-datepicker`.
+**$scope.datepickerObject** is the main object, that we need to pass to the directive. The properties of this object are as follows.
 
-b) `datePickerCallback` is the callback function which we have to pass to the `ionic-datepicker`. This function takes an argument which will return `undefined` if the user didnot selected any date. And returns a `date` object, if the user selects any date.
+a) **titleLabel**(Optional) : The label for 'Title' of the ionic-datepicker popup. Default value is `Select Date`
 
-c) `title` is the string variable, which can be assigned to the datepicker modal's title.
+b) **todayLabel**(Optional) : The label for `Today` button. Default value is `Today`
+
+c) **closeLabel**(Optional) : The label for `Close` button. Default value is `Close`
+
+d) **setLabel**(Optional) : The label for `Set` button. Default value is `Set`
+
+e) **errorMsgLabel**(Optional) : The label for the error message. Default value is `Please select a date.`
+
+f) **setButtonType**(Optional) : This the type of the `Set` button. Default value is `button-positive`. You can give any valid ionic framework's button classes.
+
+g) **inputDate**(Optional) : This is the date object to pass to the directive. You can give any date object to this property. Default value is `new Date()`. But if you wish to show the initial date in the HTML page, then you should define this property. 
+
+h) **mondayFirst**(Optional) : Set `true` if you wish to show monday as the first day. Default value is `false`.
+
+i) **disabledDates**(Optional) : If you have a list of dates to disable, you can create an array like below. Default value is an empty array.
+````javascript
+var disabledDates = [
+      new Date(1437719836326),
+      new Date(),
+      new Date(2015, 7, 10), //months are 0-based, this is August, 10th!
+      new Date('Wednesday, August 12, 2015'), //Works with any valid Date formats like long format
+      new Date("08-14-2015"), //Short format
+      new Date(1439676000000) //UNIX format
+    ];
+````
+
+j) **monthList**(Optional) : This is an array with a list of all months. You can use this if you want to show months in some other language or format. You can create an array like below.
+ ````javascript
+ var monthList = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+ ````
+ The default values are 
+ ````javascript
+ ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+````
+
+k) **from**(Optional) : This is a date object, from which you wish to enable the dates. You can use this property to disable **previous dates** by specifying `from: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+
+l) **to**(Optional) : This is a date object, to which you wish to enable the dates. You can use this property to disable **future dates** by specifying `to: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+
+m) **callback**(Mandatory) : This the callback function, which will get the selected date in to the controller. You can define this function as follows.
+````javascript
+var datePickerCallback = function (val) {
+  if (typeof(val) === 'undefined') {
+	console.log('No date selected');
+  } else {
+	console.log('Selected date is : ', val)
+  }
+};
+````
 
 5) Then use the below format in your template / html file
 
 ````html
-<ionic-datepicker idate="currentDate" disablepreviousdates="true"  disablefuturedates="false" callback="datePickerCallback" disableddates="disabledDates" title="title" mondayfirst="true">
-	<button class="button button-block button-positive"> {{ currentDate | date:'dd - MMMM - yyyy' }} </button>
+<ionic-datepicker input-obj="datepickerObject">
+  <button class="button button-block button-positive"> {{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}</button>
 </ionic-datepicker>
 ````
 
+a) **ionic-datepicker** is the directive, to which we can pass required vales.
 
-a) `ionic-datepicker` is the directive, to which we can pass required vales.
-
-b) `idate` takes date object. If we don't pass any value, the default value will be `new Date()`.
-
-c) `disablepreviousdates` takes true or false. `true` disables the past dates, and `false` doesn't.
-
-c) `disablefuturedates` takes true or false. `true` disables the future dates, and `false` doesn't.
-
-d) `callback` takes the callback function name which will be called once the date picker has been closed.
-
-e) `title` takes a variable of string type. This will be displayed as a title to the datepicker modal. If this attribute is not present, then it will show 'Select Date' by default.
-
-f) `disableddates` is an array of dates to disable the particular dates.
-
-Example : In your controller you can define `disabledDates` as follows
-
-````javascript
-$scope.disabledDates = [
-	new Date(2015,7,10), //months are 0-based, this is August, 10th!
-	new Date('Wednesday, August 12, 2015'), //Works with any valid Date formats like long format
-	new Date("08-14-2015"), //Short format
-	new Date(1439676000000) //UNIX format
-]; 
-````
-
-g) `mondayfirst` takes true or false. If the given values is `true`, shows Monday as the first day of the week, and if the given value is `false`, then Sunday will be first day of the week.
+b) **input-obj**(Mandatory) : This is an object. We have to pass an object as shown above.
 
 ##Screen Shots:
 
@@ -144,11 +172,10 @@ b) Customised title text for datepicker modal's added.
 
 **BugFixes**
 
-[Bug Fix](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/22)
+[Bug#22](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/22),
+[Bug#26](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/26),
+[Bug#29](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/29)
 
-[Bug Fix](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/26)
-
-[Bug Fix](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/29)
 ### 8) v0.5.0
 
 a) Feature for disabling particular dates has been added.
@@ -159,6 +186,23 @@ b) CSS classes added for customisation.
 a) Date selection color issue fixed.
 
 b) Added feature to show Monday as the first day of the week.
+### 10) v0.7.0
+
+**Features**
+
+a) `From` and `to` dates functionality added.
+
+b) Code re-structuring.
+ 
+c) Updated node modules.
+
+**BugFixes**
+[Bug#58](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/58),
+[Bug#56](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/56),
+[Bug#54](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/54),
+[Bug#42](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/42),
+[Bug#37](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/37),
+[Bug#28](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/28)
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-datepicker/blob/master/LICENSE.MD "MIT")

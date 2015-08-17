@@ -2,29 +2,10 @@
   <ion-content class="padding">
 
     <h3 class="text-center">Date Picker Examples</h3>
-    <hr/>
-    <h4>Date picker with previous dates disabled.</h4>
-    <ionic-datepicker idate="currentDate" disablepreviousdates="true" callback="datePickerCallback">
-      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}}</button>
-    </ionic-datepicker>
 
-    <h4>Date picker with future dates disabled.</h4>
-    <ionic-datepicker idate="currentDate" disablefuturedates="true" callback="datePickerCallback">
-      <button class="button button-block button-positive"> {{currentDate | date:'dd - MMMM - yyyy'}}</button>
-    </ionic-datepicker>
-
-    <h4>Date picker with custom title.</h4>
-    <ionic-datepicker idate="pastDate" callback="datePickerCallback" title="title">
-      <button class="button button-block button-positive"> {{pastDate | date:'dd - MMMM - yyyy'}}</button>
-    </ionic-datepicker>
-
-    <h4>Date picker with particular disabled dates.</h4>
-    <ionic-datepicker idate="augMonth" callback="datePickerCallback" title="title" disableddates="disabledDates">
-      <button class="button button-block button-positive"> {{augMonth | date:'dd - MMMM - yyyy'}}</button>
-    </ionic-datepicker>
-    <h4>Date picker with Monday as the first day of the week.</h4>
-    <ionic-datepicker idate="augMonth" callback="datePickerCallback" title="title" mondayfirst="true">
-      <button class="button button-block button-positive"> {{augMonth | date:'dd - MMMM - yyyy'}}</button>
+    <h4>Date picker with Single object passing</h4>
+    <ionic-datepicker input-obj="datepickerObject">
+      <button class="button button-block button-positive"> {{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}</button>
     </ionic-datepicker>
 
 

@@ -18,12 +18,13 @@ angular.module('starter.controllers', [])
       closeLabel: 'Close',
       setLabel: 'Set',
       errorMsgLabel : 'Please select time.',
+      setButtonType : 'button-assertive',
       inputDate: new Date(),
       mondayFirst: true,
       disabledDates:disabledDates,
       monthList:monthList,
-      //from: '8/16/2015',
-      to: '8/16/2015',
+      from: new Date(2015, 7, 2),
+      to: new Date(2015, 7, 29),
       callback: function (val) {
         datePickerCallback(val);
       }

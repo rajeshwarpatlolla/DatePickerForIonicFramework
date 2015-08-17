@@ -1,6 +1,6 @@
 {
   "name": "ionic-datepicker",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
@@ -29,14 +29,14 @@
   "dependencies": {
     "ionic": ">=0.9.27"
   },
-  "_release": "0.6.0",
+  "_release": "0.7.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.6.0",
-    "commit": "50114b6558eae63d4743b85070275e6fab7486c0"
+    "tag": "v0.7.0",
+    "commit": "b6f2dbf1094fa8a848bee3b3cabe158132852586"
   },
   "_source": "git://github.com/rajeshwarpatlolla/ionic-datepicker.git",
-  "_target": "~0.6.0",
+  "_target": "~0.7.0",
   "_originalSource": "ionic-datepicker",
   "_direct": true
 }

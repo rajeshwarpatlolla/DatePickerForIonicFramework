@@ -5,6 +5,6 @@
     "ionic": "~1.0.0"
   },
   "dependencies": {
-    "ionic-datepicker": "~0.7.0"
+    "ionic-datepicker": "master"
   }
 }

@@ -1,14 +1,12 @@
 {
   "name": "ionic-datepicker",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "authors": [
     "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>"
   ],
   "description": "A date picker component for ionic framework",
   "main": [
-    "./dist/templates.js",
-    "./dist/ionic-datepicker.js",
-    "./dist/style.css"
+    "./dist/ionic-datepicker.bundle.min.js"
   ],
   "keywords": [
     "ionic-datepicker",

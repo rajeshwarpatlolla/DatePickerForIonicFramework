@@ -3,9 +3,14 @@
 
     <h3 class="text-center">Date Picker Examples</h3>
 
-    <h4>Date picker with Single object passing</h4>
-    <ionic-datepicker input-obj="datepickerObject">
-      <button class="button button-block button-positive"> {{datepickerObject.inputDate | date:'dd - MMMM - yyyy'}}</button>
+    <h4>Date picker in a Modal</h4>
+    <ionic-datepicker input-obj="datepickerObjectModal">
+      <button class="button button-block button-positive"> {{datepickerObjectModal.inputDate | date:'dd - MMMM - yyyy'}}</button>
+    </ionic-datepicker>
+
+    <h4>Date picker in a Popup</h4>
+    <ionic-datepicker input-obj="datepickerObjectPopup">
+      <button class="button button-block button-positive"> {{datepickerObjectPopup.inputDate | date:'dd - MMMM - yyyy'}}</button>
     </ionic-datepicker>
 
 

@@ -7,8 +7,8 @@
   angular.module('ionic-datepicker')
     .directive('ionicDatepicker', IonicDatepicker);
 
-  IonicDatepicker.$inject = ['$ionicPopup', '$ionicModal', 'IonicDatePickerService'];
-  function IonicDatepicker($ionicPopup, $ionicModal, IonicDatePickerService) {
+  IonicDatepicker.$inject = ['$ionicPopup', '$ionicModal', 'IonicDatepickerService'];
+  function IonicDatepicker($ionicPopup, $ionicModal, IonicDatepickerService) {
     return {
       restrict: 'AE',
       replace: true,
@@ -59,10 +59,10 @@
         if (scope.inputObj.monthList && scope.inputObj.monthList.length === 12) {
           monthsList = scope.inputObj.monthList;
         } else {
-          monthsList = IonicDatePickerService.monthsList;
+          monthsList = IonicDatepickerService.monthsList;
         }
         scope.monthsList = monthsList;
-        scope.yearsList = IonicDatePickerService.yearsList;
+        scope.yearsList = IonicDatepickerService.yearsList;
 
         //Setting whether to show Monday as the first day of the week or not.
         if (scope.inputObj.mondayFirst) {
@@ -202,6 +202,7 @@
         scope.date_selection.selectedDate = scope.ipDate;
 
         scope.dateSelected = function (date) {
+          if(!date) return;
           scope.selctedDateString = date.dateString;
           scope.selctedDateStringCopy = angular.copy(scope.selctedDateString);
           scope.date_selection.selected = true;
@@ -210,7 +211,7 @@
         };
 
         //Getting the reference for the 'ionic-datepicker' modal.
-        $ionicModal.fromTemplateUrl('lib/ionic-datepicker/src/ionic-datepicker-modal.html', {
+        $ionicModal.fromTemplateUrl('ionic-datepicker-modal.html', {
           scope: scope,
           animation: 'slide-in-up'
         }).then(function (modal) {
@@ -287,7 +288,7 @@
           } else {
             //Getting the reference for the 'ionic-datepicker' popup.
             $ionicPopup.show({
-              templateUrl: 'lib/ionic-datepicker/src/ionic-datepicker-popup.html',
+              templateUrl: 'ionic-datepicker-popup.html',
               title: scope.titleLabel,
               subTitle: '',
               scope: scope,

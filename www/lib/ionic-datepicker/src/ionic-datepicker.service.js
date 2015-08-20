@@ -5,10 +5,10 @@
   'use strict';
 
   angular.module('ionic-datepicker')
-    .service('IonicDatePickerService',IonicDatePickerService);
+    .service('IonicDatepickerService',IonicDatepickerService);
 
-  IonicDatePickerService.$inject = [];
-  function IonicDatePickerService(){
+  IonicDatepickerService.$inject = [];
+  function IonicDatepickerService(){
     this.monthsList = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     this.yearsList = [1900,
       1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909, 1910,

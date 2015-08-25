@@ -55,13 +55,17 @@
         scope.selectedDateFull = scope.ipDate;
 
         //Setting the months list. This is useful, if the component needs to use some other language.
-        var monthsList = [];
+        scope.monthsList = [];
         if (scope.inputObj.monthList && scope.inputObj.monthList.length === 12) {
-          monthsList = scope.inputObj.monthList;
+          scope.monthsList = scope.inputObj.monthList;
         } else {
-          monthsList = IonicDatepickerService.monthsList;
+          scope.monthsList = IonicDatepickerService.monthsList;
         }
-        scope.monthsList = monthsList;
+        if (scope.inputObj.weekDaysList && scope.inputObj.weekDaysList.length === 7) {
+          scope.weekNames = scope.inputObj.weekDaysList;
+        } else {
+          scope.weekNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        }
         scope.yearsList = IonicDatepickerService.yearsList;
 
         //Setting whether to show Monday as the first day of the week or not.
@@ -92,7 +96,6 @@
         currentDate.setMilliseconds(0);
 
         scope.selctedDateString = currentDate.toString();
-        scope.weekNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         scope.today = {};
 
         if (scope.mondayFirst == true) {
@@ -143,6 +146,7 @@
 
           //To set Monday as the first day of the week.
           var firstDayMonday = scope.dayList[0].day - scope.mondayFirst;
+          firstDayMonday = (firstDayMonday < 0) ? 6 : firstDayMonday;
 
           scope.currentMonthFirstDayEpoch = scope.dayList[0].epochLocal;
           scope.currentMonthLastDayEpoch = scope.dayList[scope.dayList.length - 1].epochLocal;
@@ -154,7 +158,7 @@
           scope.rows = [];
           scope.cols = [];
 
-          scope.currentMonth = monthsList[current_date.getMonth()];
+          scope.currentMonth = scope.monthsList[current_date.getMonth()];
           scope.currentYear = current_date.getFullYear();
           scope.currentMonthSelected = scope.currentMonth;
           scope.currentYearSelected = scope.currentYear;
@@ -181,7 +185,7 @@
           }
           currentDate.setMonth(currentDate.getMonth() - 1);
 
-          scope.currentMonth = monthsList[currentDate.getMonth()];
+          scope.currentMonth = scope.monthsList[currentDate.getMonth()];
           scope.currentYear = currentDate.getFullYear();
 
           refreshDateList(currentDate);
@@ -192,7 +196,7 @@
             currentDate.setFullYear(currentDate.getFullYear());
           }
           currentDate.setMonth(currentDate.getMonth() + 1);
-          scope.currentMonth = monthsList[currentDate.getMonth()];
+          scope.currentMonth = scope.monthsList[currentDate.getMonth()];
           scope.currentYear = currentDate.getFullYear();
           refreshDateList(currentDate);
         };
@@ -208,21 +212,6 @@
           scope.date_selection.selected = true;
           scope.date_selection.selectedDate = new Date(date.dateString);
           scope.selectedDateFull = scope.date_selection.selectedDate;
-        };
-
-        //Getting the reference for the 'ionic-datepicker' modal.
-        $ionicModal.fromTemplateUrl('ionic-datepicker-modal.html', {
-          scope: scope,
-          animation: 'slide-in-up'
-        }).then(function (modal) {
-          scope.modal = modal;
-        });
-        scope.openModal = function () {
-          scope.modal.show();
-        };
-
-        scope.closeModal = function () {
-          scope.modal.hide();
         };
 
         //Called when the user clicks on any date.
@@ -272,6 +261,21 @@
         scope.setIonicDatePickerDate = function () {
           dateSelected();
           scope.closeModal();
+        };
+
+        //Getting the reference for the 'ionic-datepicker' modal.
+        $ionicModal.fromTemplateUrl('ionic-datepicker-modal.html', {
+          scope: scope,
+          animation: 'slide-in-up'
+        }).then(function (modal) {
+          scope.modal = modal;
+        });
+        scope.openModal = function () {
+          scope.modal.show();
+        };
+
+        scope.closeModal = function () {
+          scope.modal.hide();
         };
 
         //Called when the user clicks on the button to invoke the 'ionic-datepicker'

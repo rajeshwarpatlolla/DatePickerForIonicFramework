@@ -47,7 +47,7 @@ angular.module('starter.controllers', [])
       mondayFirst: true, //Optional
       disabledDates:disabledDates, //Optional
       monthList:monthList, //Optional
-      from: new Date(2015, 5, 1), //Optional
+      from: new Date(2014, 5, 1), //Optional
       to: new Date(2016, 7, 1), //Optional
       callback: function (val) { //Optional
         datePickerCallbackPopup(val);

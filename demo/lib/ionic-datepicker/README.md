@@ -7,15 +7,16 @@ This is an `ionic-datepicker` bower component, which can be used in any Ionic fr
 
 ##Prerequisites.
 
-1) node.js, bower and gulp.
+* node.js
+* npm
+* bower
+* gulp
 
 ##How to use:
 
 1) In your project repository install the ionic-datepicker using bower
 
 `bower install ionic-datepicker --save`
-*OR*
-`npm i ionic-datepicker --save`
 
 This will install the latest version released.
 
@@ -24,8 +25,7 @@ This will install the latest version released.
 ````html
 <!-- path to ionic/angularjs -->
 <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
-````    
-The path will change if you have installed with npm.
+````
 
 3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
 ````javascript
@@ -46,13 +46,14 @@ angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
       setButtonType : 'button-assertive',  //Optional
       inputDate: new Date(),	//Optional
       mondayFirst: true,	//Optional
-      disabledDates:disabledDates,	//Optional
-      monthList:monthList,	//Optional
-      templateType:'popup', //Optional
-      modalHeaderColor:'bar-positive', //Optional
-      modalFooterColor:'bar-positive', //Optional
-      from: new Date(2015, 7, 2),	//Optional
-      to: new Date(2015, 7, 29),	//Optional
+      disabledDates: disabledDates,	//Optional
+      weekDaysList: weekDaysList,	//Optional
+      monthList: monthList,	//Optional
+      templateType: 'popup', //Optional
+      modalHeaderColor: 'bar-positive', //Optional
+      modalFooterColor: 'bar-positive', //Optional
+      from: new Date(2012, 8, 2),	//Optional
+      to: new Date(2018, 8, 25),	//Optional
       callback: function (val) {	//Mandatory
         datePickerCallback(val);
       }
@@ -89,7 +90,16 @@ var disabledDates = [
     ];
 ````
 
-**j) monthList**(Optional) : This is an array with a list of all months. You can use this if you want to show months in some other language or format. You can create an array like below.
+**j) weekDaysList**(Optional) : This is an array with a list of all week days. You can use this if you want to show months in some other language or format or if you wish to use the modal instead of the popup for this component (Refer to point **l**), you can define the `weekDaysList` array in your controller as shown below.
+ ````javascript
+ var weekDaysList = ["Sun", "Mon", "Tue", "Wed", "thu", "Fri", "Sat"];
+ ````
+ The default values are 
+ ````javascript
+ ["S", "M", "T", "W", "T", "F", "S"];
+````
+
+**k) monthList**(Optional) : This is an array with a list of all months. You can use this if you want to show months in some other language or format. You can create an array like below.
  ````javascript
  var monthList = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
  ````
@@ -98,17 +108,17 @@ var disabledDates = [
  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 ````
 
-**k) templateType**(Optional) : This is string type which takes two values i.e. `modal` or `popup`. Default value is `modal`. If you wish to open in a popup, you can specify the value as `popup` or else you can ignore it.
+**l) templateType**(Optional) : This is string type which takes two values i.e. `modal` or `popup`. Default value is `modal`. If you wish to open in a popup, you can specify the value as `popup` or else you can ignore it.
 
-**l) modalHeaderColor**(Optional) : This takes any valid ionic framework's header color. Default value is `bar-stable`
+**m) modalHeaderColor**(Optional) : This takes any valid ionic framework's header color. Default value is `bar-stable`
 
-**m) modalFooterColor**(Optional) : This takes any valid ionic framework's footer color. Default value is `bar-stable`
+**n) modalFooterColor**(Optional) : This takes any valid ionic framework's footer color. Default value is `bar-stable`
       
-**n) from**(Optional) : This is a date object, from which you wish to enable the dates. You can use this property to disable **previous dates** by specifying `from: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+**o) from**(Optional) : This is a date object, from which you wish to enable the dates. You can use this property to disable **previous dates** by specifying `from: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
 
-**o) to**(Optional) : This is a date object, to which you wish to enable the dates. You can use this property to disable **future dates** by specifying `to: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+**p) to**(Optional) : This is a date object, to which you wish to enable the dates. You can use this property to disable **future dates** by specifying `to: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
 
-**p) callback**(Mandatory) : This the callback function, which will get the selected date in to the controller. You can define this function as follows.
+**q) callback**(Mandatory) : This the callback function, which will get the selected date in to the controller. You can define this function as follows.
 ````javascript
 var datePickerCallback = function (val) {
   if (typeof(val) === 'undefined') {
@@ -144,16 +154,18 @@ Once you click on the button you should see the second screen shot.
 
 ##CSS Classes:
 
-<img src="https://lh3.googleusercontent.com/GHSRmZhfiOgOLuSR816vpS5EbSnzOdH5Uw_uCJDwr7U=w442-h678-no" width="300" height="450" />
+<img src="https://lh3.googleusercontent.com/tX9IyFN9w3GigHnltCJCdSj1Df5OjDDqxPXmNr7oAdQ=w423-h634-no" width="300" height="450" />
 
 #### 1) ionic_datepicker_modal_content
 #### 2) selected_date_full
 #### 3) left_arrow
 #### 4) drop_down
-#### 5) right_arrow
-#### 6) calendar_grid
-#### 7) date_col
-#### 8) date_selected
+#### 5) month_select
+#### 6) year_select
+#### 7) right_arrow
+#### 8) date_col
+#### 9) date_selected
+#### 10) calendar_grid
 
 You can use these classes to customize the alignment, if required.
 
@@ -232,7 +244,17 @@ You can use either a popup or a modal for this `ionic-datepicker`.
 
 **BugFix**
 
-[Bug#59](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/59),
+[Bug#59](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/59)
+
+### 12) v0.9.0
+
+**Feature**
+
+You can give your custom week names.
+
+**BugFix**
+
+[Bug#63](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/63)
 
 ##License:
 [MIT](https://github.com/rajeshwarpatlolla/ionic-datepicker/blob/master/LICENSE.MD "MIT")

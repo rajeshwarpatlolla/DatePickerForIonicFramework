@@ -1,9 +1,10 @@
+[![bitHound Score](https://www.bithound.io/github/rajeshwarpatlolla/ionic-datepicker/badges/score.svg)](https://www.bithound.io/github/rajeshwarpatlolla/ionic-datepicker)
+
 ##Introduction:
 
 This is an `ionic-datepicker` bower component, which can be used in any Ionic framework's application. No additional plugins required for this component.
 
-[View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo") 
-
+[View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo")
 
 ##Prerequisites.
 
@@ -38,25 +39,29 @@ angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
 
 ````javascript
     $scope.datepickerObject = {
-      titleLabel: 'Title',	//Optional
-      todayLabel: 'Today',	//Optional
-      closeLabel: 'Close',	//Optional
-      setLabel: 'Set',	//Optional
-      errorMsgLabel : 'Please select time.',	//Optional
+      titleLabel: 'Title',  //Optional
+      todayLabel: 'Today',  //Optional
+      closeLabel: 'Close',  //Optional
+      setLabel: 'Set',  //Optional
       setButtonType : 'button-assertive',  //Optional
-      inputDate: new Date(),	//Optional
-      mondayFirst: true,	//Optional
-      disabledDates: disabledDates,	//Optional
-      weekDaysList: weekDaysList,	//Optional
-      monthList: monthList,	//Optional
+      todayButtonType : 'button-assertive',  //Optional
+      closeButtonType : 'button-assertive',  //Optional
+      inputDate: new Date(),  //Optional
+      mondayFirst: true,  //Optional
+      disabledDates: disabledDates, //Optional
+      weekDaysList: weekDaysList, //Optional
+      monthList: monthList, //Optional
       templateType: 'popup', //Optional
+      showTodayButton: 'true', //Optional
       modalHeaderColor: 'bar-positive', //Optional
       modalFooterColor: 'bar-positive', //Optional
-      from: new Date(2012, 8, 2),	//Optional
-      to: new Date(2018, 8, 25),	//Optional
-      callback: function (val) {	//Mandatory
+      from: new Date(2012, 8, 2), //Optional
+      to: new Date(2018, 8, 25),  //Optional
+      callback: function (val) {  //Mandatory
         datePickerCallback(val);
       }
+      dateFormat: 'dd-MM-yyyy', //Optional
+      closeOnSelect: false, //Optional
     };
 ````
 
@@ -70,15 +75,17 @@ angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
 
 **d) setLabel**(Optional) : The label for `Set` button. Default value is `Set`
 
-**e) errorMsgLabel**(Optional) : The label for the error message. Default value is `Please select a date.`
+**e) setButtonType**(Optional) : This the type of the `Set` button. Default value is `button-positive`. You can give any valid ionic framework's button classes.
 
-**f) setButtonType**(Optional) : This the type of the `Set` button. Default value is `button-positive`. You can give any valid ionic framework's button classes.
+**f) todayButtonType**(Optional) : This the type of the `Today` button. Default value is `button-stable`. You can give any valid ionic framework's button classes.
 
-**g) inputDate**(Optional) : This is the date object to pass to the directive. You can give any date object to this property. Default value is `new Date()`. But if you wish to show the initial date in the HTML page, then you should define this property. 
+**g) closeButtonType**(Optional) : This the type of the `Close` button. Default value is `button-stable`. You can give any valid ionic framework's button classes.
 
-**h) mondayFirst**(Optional) : Set `true` if you wish to show monday as the first day. Default value is `false`.
+**h) inputDate**(Optional) : This is the date object to pass to the directive. You can give any date object to this property. Default value is `new Date()`. But if you wish to show the initial date in the HTML page, then you should define this property.
 
-**i) disabledDates**(Optional) : If you have a list of dates to disable, you can create an array like below. Default value is an empty array.
+**i) mondayFirst**(Optional) : Set `true` if you wish to show monday as the first day. Default value is `false`.
+
+**j) disabledDates**(Optional) : If you have a list of dates to disable, you can create an array like below. Default value is an empty array.
 ````javascript
 var disabledDates = [
       new Date(1437719836326),
@@ -90,35 +97,35 @@ var disabledDates = [
     ];
 ````
 
-**j) weekDaysList**(Optional) : This is an array with a list of all week days. You can use this if you want to show months in some other language or format or if you wish to use the modal instead of the popup for this component (Refer to point **l**), you can define the `weekDaysList` array in your controller as shown below.
+**k) weekDaysList**(Optional) : This is an array with a list of all week days. You can use this if you want to show months in some other language or format or if you wish to use the modal instead of the popup for this component (Refer to point **l**), you can define the `weekDaysList` array in your controller as shown below.
  ````javascript
  var weekDaysList = ["Sun", "Mon", "Tue", "Wed", "thu", "Fri", "Sat"];
  ````
- The default values are 
+ The default values are
  ````javascript
  ["S", "M", "T", "W", "T", "F", "S"];
 ````
 
-**k) monthList**(Optional) : This is an array with a list of all months. You can use this if you want to show months in some other language or format. You can create an array like below.
+**l) monthList**(Optional) : This is an array with a list of all months. You can use this if you want to show months in some other language or format. You can create an array like below.
  ````javascript
  var monthList = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
  ````
- The default values are 
+ The default values are
  ````javascript
  ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 ````
 
-**l) templateType**(Optional) : This is string type which takes two values i.e. `modal` or `popup`. Default value is `modal`. If you wish to open in a popup, you can specify the value as `popup` or else you can ignore it.
+**m) templateType**(Optional) : This is string type which takes two values i.e. `modal` or `popup`. Default value is `modal`. If you wish to open in a popup, you can specify the value as `popup` or else you can ignore it.
 
-**m) modalHeaderColor**(Optional) : This takes any valid ionic framework's header color. Default value is `bar-stable`
+**n) modalHeaderColor**(Optional) : This takes any valid ionic framework's header color. Default value is `bar-stable`
 
-**n) modalFooterColor**(Optional) : This takes any valid ionic framework's footer color. Default value is `bar-stable`
-      
-**o) from**(Optional) : This is a date object, from which you wish to enable the dates. You can use this property to disable **previous dates** by specifying `from: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+**o) modalFooterColor**(Optional) : This takes any valid ionic framework's footer color. Default value is `bar-stable`
 
-**p) to**(Optional) : This is a date object, to which you wish to enable the dates. You can use this property to disable **future dates** by specifying `to: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+**p) from**(Optional) : This is a date object, from which you wish to enable the dates. You can use this property to disable **previous dates** by specifying `from: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
 
-**q) callback**(Mandatory) : This the callback function, which will get the selected date in to the controller. You can define this function as follows.
+**q) to**(Optional) : This is a date object, to which you wish to enable the dates. You can use this property to disable **future dates** by specifying `to: new Date()`. By default all the dates are enabled. Please note that months are 0 based.
+
+**r) callback**(Mandatory) : This the callback function, which will get the selected date in to the controller. You can define this function as follows.
 ````javascript
 var datePickerCallback = function (val) {
   if (typeof(val) === 'undefined') {
@@ -128,6 +135,10 @@ var datePickerCallback = function (val) {
   }
 };
 ````
+
+**s) dateFormat**(Optional) : This is date format used in template. Defaults to `dd-MM-yyyy`. For how to format date, see: http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15
+
+**t) closeOnSelect**(Optional) : Boolean to indicate wheteher datepicker will be closed after date selection. If set to `true`, "Set" button will be hidden. Defaults to `false`.
 
 5) Then use the below format in your template / html file
 
@@ -144,7 +155,7 @@ var datePickerCallback = function (val) {
 ##Screen Shots:
 
 Once you are successfully done with the above steps, you should be able to see the below screen shots.
-I have used two buttons here. 
+I have used two buttons here.
 
 The first screen shot shows only the buttons before clicking on them.
 Once you click on the button you should see the second screen shot.
@@ -160,8 +171,8 @@ Once you click on the button you should see the second screen shot.
 #### 2) selected_date_full
 #### 3) left_arrow
 #### 4) drop_down
-#### 5) month_select
-#### 6) year_select
+#### 5) month_dropdown
+#### 6) year_dropdown
 #### 7) right_arrow
 #### 8) date_col
 #### 9) date_selected
@@ -224,7 +235,7 @@ b) Added feature to show Monday as the first day of the week.
 a) `From` and `to` dates functionality added.
 
 b) Code re-structuring.
- 
+
 c) Updated node modules.
 
 **BugFixes**
@@ -269,3 +280,5 @@ twitter : https://twitter.com/rajeshwar_9032
 facebook : https://www.facebook.com/rajeshwarpatlolla
 
 paypal : rajeshwar.patlolla@gmail.com
+
+Comment or Rate it : http://market.ionic.io/plugins/ionicdatepicker

@@ -1,5 +1,5 @@
-angular.module('ionic-datepicker.services', [])
+angular.module('ionic-datepicker.factories', [])
 
-.factory('Chats', function() {
+  .factory('Chats', function () {
 
-});
+  });

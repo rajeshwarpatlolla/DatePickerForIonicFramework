@@ -1,9 +1,9 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', function ($scope) {
+  .controller('DashCtrl', function ($scope, ionicDatePiker) {
 
     $scope.openDatePicker = function () {
-      console.log('opende');
+      ionicDatePiker.openDatePicker(new Date());
     };
 
   })

@@ -21,3 +21,36 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+//=============================================================================================
+
+$pc1: #009688;
+$pc2: #00796B;
+
+.padding_zero {
+  padding: 0;
+}
+
+.ionic_datepicker {
+  .popup-head {
+    background-color: $pc1;
+    .popup-title {
+      color: #ffffff;
+    }
+    .popup-sub-title {
+      color: #ffffff;
+    }
+  }
+  .popup-body {
+    background-color: #ffffff;
+  }
+  .popup-buttons {
+    padding: 0;
+    min-height: 45px;
+    button {
+      background-color: $pc1;
+      border-radius: 0;
+      margin-right: 1px;
+      color: #ffffff;
+    }
+  }
+}

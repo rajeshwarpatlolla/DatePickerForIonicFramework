@@ -1,5 +1,5 @@
 angular.module('starter')
 
-.config(function() {
-
-});
+  .config(function (ionicDatePikerProvider) {
+    ionicDatePikerProvider.initDatePicker();
+  });

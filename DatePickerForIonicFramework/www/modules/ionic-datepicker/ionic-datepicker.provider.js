@@ -40,6 +40,7 @@ angular.module('ionic-datepicker.providers', [])
 
       $scope.today = provider.resetHMSM($scope.today).getTime();
 
+      //Previous month
       $scope.prevMonth = function () {
         if ($scope.currentDate.getMonth() === 1) {
           $scope.currentDate.setFullYear($scope.currentDate.getFullYear());
@@ -52,6 +53,7 @@ angular.module('ionic-datepicker.providers', [])
         provider.refreshDateList($scope.currentDate);
       };
 
+      //Next month
       $scope.nextMonth = function () {
         if ($scope.currentDate.getMonth() === 11) {
           $scope.currentDate.setFullYear($scope.currentDate.getFullYear());
@@ -63,8 +65,8 @@ angular.module('ionic-datepicker.providers', [])
         provider.refreshDateList($scope.currentDate);
       };
 
+      //Date selected
       $scope.dateSelected = function (selectedDate) {
-        console.log(selectedDate);
         if (!selectedDate || Object.keys(selectedDate).length === 0) return;
         $scope.selctedDateEpoch = selectedDate.epoch;
       };
@@ -127,24 +129,25 @@ angular.module('ionic-datepicker.providers', [])
         $scope.numColumns = 7;
       };
 
+      //Month changed
       $scope.monthChanged = function (month) {
         var monthNumber = $scope.monthsList.indexOf(month);
         $scope.currentDate.setMonth(monthNumber);
         provider.refreshDateList($scope.currentDate);
       };
 
+      //Year changed
       $scope.yearChanged = function (year) {
         $scope.currentDate.setFullYear(year);
         provider.refreshDateList($scope.currentDate);
       };
 
+      //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
         $scope.mainObj = {};
         angular.extend($scope.mainObj, config, ipObj);
-        console.log('openDatePicker', $scope.mainObj);
 
-        $scope.date = new Date();
-        $scope.selctedDateEpoch = $scope.mainObj.inputDate;
+        $scope.selctedDateEpoch = provider.resetHMSM($scope.mainObj.inputDate).getTime();
         provider.refreshDateList($scope.mainObj.inputDate);
 
         // An elaborate, custom popup
@@ -158,28 +161,30 @@ angular.module('ionic-datepicker.providers', [])
             {
               text: 'Set',
               onTap: function (e) {
-
+                $scope.mainObj.callback($scope.selctedDateEpoch);
               }
             },
             {
               text: 'Today',
               onTap: function (e) {
-
+                var today = new Date();
+                provider.refreshDateList(new Date());
+                $scope.selctedDateEpoch = provider.resetHMSM(today).getTime();
+                e.preventDefault();
               }
             },
             {
               text: 'Close',
               onTap: function (e) {
-
+                $scope.mainObj.callback(undefined);
               }
             }
           ]
         });
 
         myPopup.then(function (res) {
-          console.log('Tapped!', res);
+          console.log('Closed', res);
         });
-
       };
 
       return provider;

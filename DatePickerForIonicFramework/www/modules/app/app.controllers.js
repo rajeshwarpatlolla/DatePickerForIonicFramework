@@ -5,7 +5,7 @@ angular.module('starter.controllers', [])
     $scope.openDatePicker = function () {
       var ipObj = {
         callback: function (val) {  //Mandatory
-          console.log('Return value from the datepicker is : ' + val);
+          console.log('Return value from the datepicker is : ' + val, new Date(val));
         },
         disabledDates: [
           new Date(1437719836326),

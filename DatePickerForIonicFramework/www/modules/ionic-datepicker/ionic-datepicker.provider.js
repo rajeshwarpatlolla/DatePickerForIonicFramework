@@ -41,7 +41,6 @@ angular.module('ionic-datepicker.providers', [])
       $scope.today = provider.resetHMSM($scope.today).getTime();
 
       $scope.prevMonth = function () {
-        console.log('prevMonth');
         if ($scope.currentDate.getMonth() === 1) {
           $scope.currentDate.setFullYear($scope.currentDate.getFullYear());
         }
@@ -104,7 +103,6 @@ angular.module('ionic-datepicker.providers', [])
             epoch: tempDate.getTime()
           });
         }
-        console.log($scope.dayList);
 
         if ($scope.mainObj.mondayFirst === true) {
           var lastWeekDay = $scope.mainObj.weeksList.shift();
@@ -127,6 +125,17 @@ angular.module('ionic-datepicker.providers', [])
         $scope.currentMonthSelected = $scope.currentMonth;
         $scope.currentYearSelected = $scope.currentYear;
         $scope.numColumns = 7;
+      };
+
+      $scope.monthChanged = function (month) {
+        var monthNumber = $scope.monthsList.indexOf(month);
+        $scope.currentDate.setMonth(monthNumber);
+        provider.refreshDateList($scope.currentDate);
+      };
+
+      $scope.yearChanged = function (year) {
+        $scope.currentDate.setFullYear(year);
+        provider.refreshDateList($scope.currentDate);
       };
 
       provider.openDatePicker = function (ipObj) {

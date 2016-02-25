@@ -9769,7 +9769,7 @@ a.button {
     line-height: 45px;
     font-size: 18px; }
   .ionic_datepicker .popup-body .select_section {
-    padding: 0 5px; }
+    padding: 1px 5px; }
   .ionic_datepicker .popup-body .month_select, .ionic_datepicker .popup-body .year_select {
     border: none;
     border-bottom: 1px solid #009688;
@@ -9780,6 +9780,9 @@ a.button {
     .ionic_datepicker .popup-body .month_select select, .ionic_datepicker .popup-body .year_select select {
       left: 10px;
       border: none; }
+  .ionic_datepicker .popup-body .month_select:after, .ionic_datepicker .popup-body .year_select:after {
+    right: 5px;
+    color: #009688; }
   .ionic_datepicker .popup-body .show_nav {
     padding: 10px 0 0 0; }
     .ionic_datepicker .popup-body .show_nav .prev_btn_section {

@@ -81,7 +81,7 @@ $pc2: #00796B;
       font-size: 18px;
     }
     .select_section {
-      padding: 0 5px;
+      padding: 1px 5px;
     }
     .month_select, .year_select {
       border: none;
@@ -95,6 +95,11 @@ $pc2: #00796B;
         left: 10px;
         border: none;
       }
+
+    }
+    .month_select:after, .year_select:after {
+      right: 5px;
+      color: $pc1;
     }
 
     .show_nav {

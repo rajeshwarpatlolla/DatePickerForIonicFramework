@@ -9730,8 +9730,14 @@ a.button {
 .ionic_datepicker .padding_top_zero {
   padding-top: 0; }
 
+.ionic_datepicker .padding_left_5px {
+  padding-left: 5px; }
+
+.ionic_datepicker .padding_right_5px {
+  padding-right: 5px; }
+
 .ionic_datepicker .calendar_grid {
-  height: 210px; }
+  height: 215px; }
 
 .ionic_datepicker .today {
   border: 1px solid #009688;
@@ -9762,8 +9768,30 @@ a.button {
     color: #fff;
     line-height: 45px;
     font-size: 18px; }
+  .ionic_datepicker .popup-body .select_section {
+    padding: 0 5px; }
+  .ionic_datepicker .popup-body .month_select, .ionic_datepicker .popup-body .year_select {
+    border: none;
+    border-bottom: 1px solid #009688;
+    padding: 0; }
+    .ionic_datepicker .popup-body .month_select .input-label, .ionic_datepicker .popup-body .year_select .input-label {
+      padding: 2px 0;
+      width: 0; }
+    .ionic_datepicker .popup-body .month_select select, .ionic_datepicker .popup-body .year_select select {
+      left: 10px;
+      border: none; }
   .ionic_datepicker .popup-body .show_nav {
     padding: 10px 0 0 0; }
+    .ionic_datepicker .popup-body .show_nav .prev_btn_section {
+      padding: 5px 0;
+      text-align: left; }
+      .ionic_datepicker .popup-body .show_nav .prev_btn_section button {
+        padding: 0; }
+    .ionic_datepicker .popup-body .show_nav .next_btn_section {
+      padding: 5px 0;
+      text-align: right; }
+      .ionic_datepicker .popup-body .show_nav .next_btn_section button {
+        padding: 0; }
   .ionic_datepicker .popup-body .button-clear {
     color: #009688; }
 

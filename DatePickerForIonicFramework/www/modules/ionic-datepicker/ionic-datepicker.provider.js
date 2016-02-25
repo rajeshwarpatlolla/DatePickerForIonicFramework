@@ -23,7 +23,7 @@ angular.module('ionic-datepicker.providers', [])
       angular.extend(config, inputObj);
     };
 
-    this.$get = function ($rootScope, $ionicPopup) {
+    this.$get = function ($rootScope, $ionicPopup, IonicDatepickerService) {
 
       var provider = {};
       var $scope = $rootScope.$new();
@@ -70,17 +70,27 @@ angular.module('ionic-datepicker.providers', [])
         $scope.selctedDateEpoch = selectedDate.epoch;
       };
 
-      $scope.changeSection = function (val) {
-        console.log('changeSection : ', val);
-        $scope.showSection = val;
-      };
-
       //Refresh the list of the dates of a month
       provider.refreshDateList = function (currentDate) {
         currentDate = provider.resetHMSM(currentDate);
         $scope.currentDate = angular.copy(currentDate);
+
         var firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDate();
         var lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+
+        $scope.monthsList = [];
+        if ($scope.mainObj.monthsList && $scope.mainObj.monthsList.length === 12) {
+          $scope.monthsList = $scope.mainObj.monthsList;
+        } else {
+          $scope.monthsList = IonicDatepickerService.monthsList;
+        }
+        if ($scope.mainObj.weeksList && $scope.mainObj.weeksList.length === 7) {
+          $scope.weeksList = $scope.mainObj.weeksList;
+        } else {
+          $scope.weeksList = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+        }
+
+        $scope.yearsList = IonicDatepickerService.getYearsList($scope.mainObj.from, $scope.mainObj.to);
 
         $scope.dayList = [];
 
@@ -125,7 +135,6 @@ angular.module('ionic-datepicker.providers', [])
         console.log('openDatePicker', $scope.mainObj);
 
         $scope.date = new Date();
-        $scope.showSection = 0;
         $scope.selctedDateEpoch = $scope.mainObj.inputDate;
         provider.refreshDateList($scope.mainObj.inputDate);
 

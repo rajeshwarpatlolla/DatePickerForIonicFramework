@@ -1,6 +1,6 @@
 {
-  "name": "DatePickerForIonicFramework",
-  "app_id": "",
+  "name": "ionic-datepicker-demo",
+  "app_id": "ad9d9221",
   "gulpStartupTasks": [
     "sass",
     "watch"

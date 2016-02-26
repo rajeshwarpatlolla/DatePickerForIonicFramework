@@ -1,5 +1,7 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <button class="button button-positive button-block" ng-click="openDatePicker()">Open Date Picker</button>
+    <button class="button button-positive button-block" ng-click="openDatePicker(1)">Open Date Picker 1</button>
+    <button class="button button-positive button-block" ng-click="openDatePicker(2)"
+      ng-disabled="!selectedDate">Open Date Picker 2</button>
   </ion-content>
 </ion-view>

@@ -11,7 +11,7 @@ angular.module('ionic-datepicker.providers', [])
       weeksList: ["S", "M", "T", "W", "T", "F", "S"],
       monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
       templateType: 'popup',
-      showTodayButton: 'true',
+      showTodayButton: true,
       closeOnSelect: false,
       disableWeekdays: []
     };
@@ -24,8 +24,7 @@ angular.module('ionic-datepicker.providers', [])
 
       var provider = {};
       var $scope = $rootScope.$new();
-      $scope.today = new Date();
-
+      $scope.today = resetHMSM(new Date()).getTime();
       $scope.disabledDates = [];
 
       //Reset the hours, minutes, seconds and milli seconds
@@ -36,8 +35,6 @@ angular.module('ionic-datepicker.providers', [])
         currentDate.setMilliseconds(0);
         return currentDate;
       }
-
-      $scope.today = resetHMSM($scope.today).getTime();
 
       //Previous month
       $scope.prevMonth = function () {
@@ -144,10 +141,7 @@ angular.module('ionic-datepicker.providers', [])
       };
 
       function setInitialObj(ipObj) {
-        var mainObj = {};
-        angular.extend(mainObj, config, ipObj);
-        $scope.mainObj = angular.copy(mainObj);
-
+        $scope.mainObj = angular.copy(ipObj);
         $scope.selctedDateEpoch = resetHMSM($scope.mainObj.inputDate).getTime();
 
         if ($scope.mainObj.weeksList && $scope.mainObj.weeksList.length === 7) {
@@ -164,44 +158,48 @@ angular.module('ionic-datepicker.providers', [])
         refreshDateList($scope.mainObj.inputDate);
         setDisabledDates($scope.mainObj);
       }
-
       //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
-        var ipObj = angular.copy(ipObj);
+        angular.extend(ipObj, config, ipObj);
         setInitialObj(ipObj);
+        var buttons = [];
+
+        buttons = [{
+          text: ipObj.setLabel,
+          //type: ipObj.setButtonType,
+          onTap: function (e) {
+            ipObj.callback($scope.selctedDateEpoch);
+          }
+        }];
+
+        if (ipObj.showTodayButton) {
+          buttons.push({
+            text: ipObj.todayLabel,
+            //type: ipObj.todayButtonType,
+            onTap: function (e) {
+              var today = new Date();
+              refreshDateList(new Date());
+              $scope.selctedDateEpoch = resetHMSM(today).getTime();
+              e.preventDefault();
+            }
+          })
+        }
+
+        buttons.push({
+          text: ipObj.closeLabel,
+          //type: ipObj.closeButtonType,
+          onTap: function (e) {
+            ipObj.callback(undefined);
+          }
+        });
 
         var myPopup = $ionicPopup.show({
           templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
-          //title: $scope.mainObj.titleLabel,
+          //title: ipObj.titleLabel,
           //subTitle: 'Please use normal things',
           scope: $scope,
           cssClass: 'ionic_datepicker',
-          buttons: [
-            {
-              text: $scope.mainObj.setLabel,
-              //type: $scope.mainObj.setButtonType,
-              onTap: function (e) {
-                $scope.mainObj.callback($scope.selctedDateEpoch);
-              }
-            },
-            {
-              text: $scope.mainObj.todayLabel,
-              //type: $scope.mainObj.todayButtonType,
-              onTap: function (e) {
-                var today = new Date();
-                refreshDateList(new Date());
-                $scope.selctedDateEpoch = resetHMSM(today).getTime();
-                e.preventDefault();
-              }
-            },
-            {
-              text: $scope.mainObj.closeLabel,
-              //type: $scope.mainObj.closeButtonType,
-              onTap: function (e) {
-                $scope.mainObj.callback(undefined);
-              }
-            }
-          ]
+          buttons: buttons
         });
 
         myPopup.then(function (res) {

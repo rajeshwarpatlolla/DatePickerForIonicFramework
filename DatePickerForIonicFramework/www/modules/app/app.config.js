@@ -10,7 +10,7 @@ angular.module('starter')
       weeksList: ["S", "M", "T", "W", "T", "F", "S"],
       monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
       templateType: 'popup',
-      showTodayButton: 'true',
+      showTodayButton: true,
       dateFormat: 'dd MMMM yyyy',
       closeOnSelect: false,
       disableWeekdays: []

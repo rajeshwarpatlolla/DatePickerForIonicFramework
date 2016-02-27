@@ -1,7 +1,14 @@
 <ion-view view-title="Dashboard">
   <ion-content class="padding">
-    <button class="button button-positive button-block" ng-click="openDatePicker(1)">Open Date Picker 1</button>
-    <button class="button button-positive button-block" ng-click="openDatePicker(2)"
-      ng-disabled="!selectedDate">Open Date Picker 2</button>
+    <div class="padding-vertical">
+      <button class="button button-positive button-block" ng-click="openDatePickerFn(1)">Open Date Picker 1</button>
+      <div class="text-center" ng-show="selectedDate1">{{selectedDate1 | date:'dd-MMM-yyyy'}}</div>
+    </div>
+    <div class="padding-vertical">
+      <button class="button button-positive button-block" ng-click="openDatePickerFn(2)"
+              ng-show="selectedDate1">Open Date Picker 2
+      </button>
+      <div class="text-center" ng-show="selectedDate2">{{selectedDate2 | date:'dd-MMM-yyyy'}}</div>
+    </div>
   </ion-content>
 </ion-view>

@@ -2,15 +2,15 @@ angular.module('starter.controllers', [])
 
   .controller('DashCtrl', function ($scope, ionicDatePiker) {
 
-    $scope.selectedDate;
+    $scope.selectedDate1;
+    $scope.selectedDate2;
 
-    $scope.openDatePicker = function (val) {
-      var ipObj;
+    $scope.openDatePickerFn = function (val) {
       if (val == 1) {
-        ipObj = {
+        var ipObj1 = {
           callback: function (val) {  //Mandatory
             console.log('Return value from the datepicker is : ' + val, new Date(val));
-            $scope.selectedDate = new Date(val);
+            $scope.selectedDate1 = new Date(val);
           },
           disabledDates: [
             new Date(1437719836326),
@@ -22,21 +22,24 @@ angular.module('starter.controllers', [])
             new Date(1456511400000)
           ],
           from: new Date(2012, 8, 2),
-          to: new Date(2018, 8, 25),
+          to: new Date(2016, 8, 25),
           inputDate: new Date(),
           mondayFirst: true,
-          disableWeekdays: [0, 6]
+          disableWeekdays: [0]
         };
+        ionicDatePiker.openDatePicker(ipObj1);
       } else {
-        ipObj = {
+        var ipObj2 = {
           callback: function (val) {  //Mandatory
             console.log('Return value from the datepicker is : ' + val, new Date(val));
+            $scope.selectedDate2 = new Date(val);
           },
-          inputDate: $scope.selectedDate,
+          inputDate: $scope.selectedDate1,
           mondayFirst: true
         };
+        ionicDatePiker.openDatePicker(ipObj2);
       }
-      ionicDatePiker.openDatePicker(ipObj);
+
     };
 
   })

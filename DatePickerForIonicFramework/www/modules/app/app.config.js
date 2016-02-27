@@ -1,6 +1,7 @@
 angular.module('starter')
 
   .config(function (ionicDatePikerProvider) {
+
     var datePickerObj = {
       setLabel: 'Set2',
       todayLabel: 'Today2',
@@ -13,8 +14,11 @@ angular.module('starter')
       showTodayButton: true,
       dateFormat: 'dd MMMM yyyy',
       closeOnSelect: false,
-      disableWeekdays: []
+      disableWeekdays: [6],
+      from: new Date(2012, 8, 2),
+      to: new Date(2018, 8, 25)
     };
 
     ionicDatePikerProvider.configDatePicker(datePickerObj);
+
   });

@@ -69,7 +69,7 @@ angular.module('ionic-datepicker.providers', [])
 
       //Setting the disabled dates list.
       function setDisabledDates(mainObj) {
-        if (mainObj.disabledDates && mainObj.disabledDates.length === 0) {
+        if (!mainObj.disabledDates || mainObj.disabledDates.length === 0) {
           $scope.disabledDates = [];
         } else {
           angular.forEach(mainObj.disabledDates, function (val, key) {
@@ -149,7 +149,7 @@ angular.module('ionic-datepicker.providers', [])
         } else {
           $scope.weeksList = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         }
-        if ($scope.mainObj.mondayFirst === true) {
+        if ($scope.mainObj.mondayFirst) {
           var lastWeekDay = $scope.mainObj.weeksList.shift();
           $scope.weeksList.push(lastWeekDay);
         }
@@ -158,24 +158,30 @@ angular.module('ionic-datepicker.providers', [])
         refreshDateList($scope.mainObj.inputDate);
         setDisabledDates($scope.mainObj);
       }
+
       //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
-        angular.extend(ipObj, config, ipObj);
-        setInitialObj(ipObj);
+
+        var temp = angular.extend({}, config, ipObj);
+        if (ipObj.disableWeekdays && config.disableWeekdays) {
+          temp.disableWeekdays = ipObj.disableWeekdays.concat(config.disableWeekdays);
+        }
+        setInitialObj(angular.copy(temp));
+
         var buttons = [];
 
         buttons = [{
-          text: ipObj.setLabel,
-          //type: ipObj.setButtonType,
+          text: temp.setLabel,
+          //type: temp.setButtonType,
           onTap: function (e) {
-            ipObj.callback($scope.selctedDateEpoch);
+            temp.callback($scope.selctedDateEpoch);
           }
         }];
 
-        if (ipObj.showTodayButton) {
+        if (temp.showTodayButton) {
           buttons.push({
-            text: ipObj.todayLabel,
-            //type: ipObj.todayButtonType,
+            text: temp.todayLabel,
+            //type: temp.todayButtonType,
             onTap: function (e) {
               var today = new Date();
               refreshDateList(new Date());
@@ -186,16 +192,16 @@ angular.module('ionic-datepicker.providers', [])
         }
 
         buttons.push({
-          text: ipObj.closeLabel,
-          //type: ipObj.closeButtonType,
+          text: temp.closeLabel,
+          //type: temp.closeButtonType,
           onTap: function (e) {
-            ipObj.callback(undefined);
+            temp.callback(undefined);
           }
         });
 
         var myPopup = $ionicPopup.show({
           templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
-          //title: ipObj.titleLabel,
+          //title: temp.titleLabel,
           //subTitle: 'Please use normal things',
           scope: $scope,
           cssClass: 'ionic_datepicker',

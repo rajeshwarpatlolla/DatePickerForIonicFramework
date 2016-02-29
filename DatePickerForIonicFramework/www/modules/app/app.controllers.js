@@ -25,7 +25,8 @@ angular.module('starter.controllers', [])
         inputDate: new Date(),
         mondayFirst: true,
         disableWeekdays: [0],
-        closeOnSelect: true
+        closeOnSelect: true,
+        templateType: 'modal'
       };
       ionicDatePiker.openDatePicker(ipObj1);
     };

@@ -20,7 +20,7 @@ angular.module('ionic-datepicker.providers', [])
       angular.extend(config, inputObj);
     };
 
-    this.$get = function ($rootScope, $ionicPopup, IonicDatepickerService) {
+    this.$get = function ($rootScope, $ionicPopup, $ionicModal, IonicDatepickerService) {
 
       var provider = {};
       var $scope = $rootScope.$new();
@@ -68,7 +68,11 @@ angular.module('ionic-datepicker.providers', [])
 
         if ($scope.mainObj.closeOnSelect) {
           $scope.mainObj.callback($scope.selctedDateEpoch);
-          $scope.popup.close();
+          if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
+            $scope.popup.close();
+          } else {
+            closeModal();
+          }
         }
       };
 
@@ -164,6 +168,25 @@ angular.module('ionic-datepicker.providers', [])
         setDisabledDates($scope.mainObj);
       }
 
+      $ionicModal.fromTemplateUrl('modules/ionic-datepicker/ionic-datepicker-modal.html', {
+        scope: $scope,
+        animation: 'slide-in-up'
+      }).then(function (modal) {
+        $scope.modal = modal;
+      });
+
+      function openModal() {
+        $scope.modal.show();
+      }
+
+      function closeModal() {
+        $scope.modal.hide();
+      }
+
+      $scope.closeIonicDatePickerModal = function () {
+        closeModal();
+      };
+
       //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
 
@@ -207,18 +230,36 @@ angular.module('ionic-datepicker.providers', [])
           });
         }
 
-        $scope.popup = $ionicPopup.show({
-          templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
-          //title: $scope.mainObj.titleLabel,
-          //subTitle: 'Please use normal things',
+        $ionicModal.fromTemplateUrl('modules/ionic-datepicker/ionic-datepicker-modal.html', {
           scope: $scope,
-          cssClass: 'ionic_datepicker',
-          buttons: buttons
+          animation: 'slide-in-up'
+        }).then(function (modal) {
+          $scope.modal = modal;
         });
+        var openModal = function () {
+          $scope.modal.show();
+        };
+        var closeModal = function () {
+          $scope.modal.hide();
+        };
 
-        $scope.popup.then(function (res) {
-          console.log('Closed', res);
-        });
+        if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
+          $scope.popup = $ionicPopup.show({
+            templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
+            //title: $scope.mainObj.titleLabel,
+            //subTitle: 'Please use normal things',
+            scope: $scope,
+            cssClass: 'ionic_datepicker',
+            buttons: buttons
+          });
+
+          $scope.popup.then(function (res) {
+            console.log('Closed', res);
+          });
+        } else {
+          openModal();
+        }
+
       };
 
       return provider;

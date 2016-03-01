@@ -1,10 +1,7 @@
 {
-  "name": "DatePickerForIonicFramework",
+  "name": "HelloIonic",
   "private": "true",
   "devDependencies": {
-    "ionic": "~1.0.0"
-  },
-  "dependencies": {
-    "ionic-datepicker": "master"
+    "ionic": "driftyco/ionic-bower#1.2.4"
   }
 }

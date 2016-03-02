@@ -236,7 +236,7 @@ angular.module('ionic-datepicker.providers', [])
             //title: $scope.mainObj.titleLabel,
             //subTitle: 'Please use normal things',
             scope: $scope,
-            cssClass: 'ionic_datepicker',
+            cssClass: 'ionic_datepicker_popup',
             buttons: buttons
           });
 

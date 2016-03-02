@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/app.controllers.js" afterPath="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" afterPath="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DatePickerForIonicFramework.iws" />
@@ -46,7 +41,7 @@
             <state vertical-scroll-proportion="-3.113924">
               <caret line="60" column="31" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="31" />
               <folding>
-                <marker date="1456907442000" expanded="true" signature="2229:2535" placeholder="{...}" />
+                <marker date="1456907736000" expanded="true" signature="2229:2535" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -140,11 +135,11 @@
         <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.controllers.js" />
         <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
         <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
-        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
         <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
         <option value="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" />
         <option value="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
       </list>
     </option>
   </component>
@@ -484,7 +479,7 @@
         <state vertical-scroll-proportion="-3.113924">
           <caret line="60" column="31" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="31" />
           <folding>
-            <marker date="1456907442000" expanded="true" signature="2229:2535" placeholder="{...}" />
+            <marker date="1456907736000" expanded="true" signature="2229:2535" placeholder="{...}" />
           </folding>
         </state>
       </provider>

@@ -230,19 +230,6 @@ angular.module('ionic-datepicker.providers', [])
           });
         }
 
-        $ionicModal.fromTemplateUrl('modules/ionic-datepicker/ionic-datepicker-modal.html', {
-          scope: $scope,
-          animation: 'slide-in-up'
-        }).then(function (modal) {
-          $scope.modal = modal;
-        });
-        var openModal = function () {
-          $scope.modal.show();
-        };
-        var closeModal = function () {
-          $scope.modal.hide();
-        };
-
         if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
           $scope.popup = $ionicPopup.show({
             templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',

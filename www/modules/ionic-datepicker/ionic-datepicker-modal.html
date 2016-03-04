@@ -30,7 +30,7 @@
                 <!--<select ng-model="currentYear" ng-change="yearChanged(currentYear)" class="year_select"
                         ng-options="year as year for year in yearsList " ng-selected="year == currentYearSelected">
                 </select>-->
-                <select ng-model="currentMonth" ng-change="yearChanged(currentYear)">
+                <select ng-model="currentYear" ng-change="yearChanged(currentYear)">
                   <option ng-repeat="year in yearsList" value="{{year}}">{{year}}</option>
                 </select>
               </label>

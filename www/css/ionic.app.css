@@ -9782,7 +9782,8 @@ a.button {
       width: 0; }
     .ionic_datepicker_popup .popup-body .month_select select, .ionic_datepicker_popup .popup-body .year_select select {
       left: 10px;
-      border: none; }
+      border: none;
+      padding: 0; }
   .ionic_datepicker_popup .popup-body .month_select:after, .ionic_datepicker_popup .popup-body .year_select:after {
     right: 5px;
     color: #009688; }

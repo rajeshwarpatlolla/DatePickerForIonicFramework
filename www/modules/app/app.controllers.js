@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
         mondayFirst: true,
         disableWeekdays: [0],
         closeOnSelect: false,
-        templateType: 'modal'
+        templateType: 'popup'
       };
       ionicDatePiker.openDatePicker(ipObj1);
     };
@@ -52,7 +52,7 @@ angular.module('starter.controllers', [])
         mondayFirst: true,
         disableWeekdays: [0],
         closeOnSelect: false,
-        templateType: 'popup'
+        templateType: 'modal'
       };
       ionicDatePiker.openDatePicker(ipObj1);
     }

@@ -76,6 +76,21 @@ angular.module('ionic-datepicker.providers', [])
         }
       };
 
+      $scope.setIonicDatePickerTodayDate = function () {
+        var today = new Date();
+        refreshDateList(new Date());
+        $scope.selctedDateEpoch = resetHMSM(today).getTime();
+        if ($scope.mainObj.closeOnSelect) {
+          $scope.mainObj.callback($scope.selctedDateEpoch);
+          closeModal();
+        }
+      };
+
+      $scope.setIonicDatePickerDate = function () {
+        $scope.mainObj.callback($scope.selctedDateEpoch);
+        closeModal();
+      };
+
       //Setting the disabled dates list.
       function setDisabledDates(mainObj) {
         if (!mainObj.disabledDates || mainObj.disabledDates.length === 0) {
@@ -131,7 +146,7 @@ angular.module('ionic-datepicker.providers', [])
 
         $scope.currentMonth = $scope.mainObj.monthsList[currentDate.getMonth()];
         $scope.currentYear = currentDate.getFullYear();
-        $scope.currentMonthSelected = $scope.currentMonth;
+        $scope.currentMonthSelected = angular.copy($scope.currentMonth);
         $scope.currentYearSelected = $scope.currentYear;
         $scope.numColumns = 7;
       }
@@ -216,7 +231,9 @@ angular.module('ionic-datepicker.providers', [])
                 var today = new Date();
                 refreshDateList(new Date());
                 $scope.selctedDateEpoch = resetHMSM(today).getTime();
-                e.preventDefault();
+                if (!$scope.mainObj.closeOnSelect) {
+                  e.preventDefault();
+                }
               }
             })
           }

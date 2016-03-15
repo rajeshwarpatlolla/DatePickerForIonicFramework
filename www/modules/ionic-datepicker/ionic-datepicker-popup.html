@@ -10,22 +10,20 @@
           <label class="item item-input item-select month_select">
             <span class="input-label">&nbsp;</span>
             <select ng-model="currentMonth" ng-change="monthChanged(currentMonth)">
-              <option ng-repeat="month in monthsList" value="{{month}}">{{month}}</option>
+              <option ng-repeat="month in monthsList" ng-selected="month==currentMonthSelected" value="{{month}}">
+                {{month}}
+              </option>
             </select>
-            <!--<select ng-model="currentMonth" ng-change="monthChanged(currentMonth)" class="month_select"
-                    ng-options="month for month in monthsList" ng-selected="month == currentMonthSelected">
-            </select>-->
           </label>
         </div>
         <div class="col-50 padding_left_5px">
           <label class="item item-input item-select year_select">
             <span class="input-label">&nbsp;</span>
-            <select ng-model="currentYear" ng-change="yearChanged(currentYear)">
-              <option ng-repeat="year in yearsList" value="{{year}}">{{year}}</option>
+            <select ng-model="currentYear" ng-change="monthChanged(currentYear)">
+              <option ng-repeat="year in yearsList" ng-selected="year==currentYearSelected" value="{{year}}">
+                {{year}}
+              </option>
             </select>
-            <!--<select ng-model="currentYear" ng-change="yearChanged(currentYear)" class="year_select"
-                    ng-options="year for year in yearsList" ng-selected="year == currentYearSelected">
-            </select>-->
           </label>
         </div>
       </div>

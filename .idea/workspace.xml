@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/app.config.js" afterPath="$PROJECT_DIR$/www/modules/app/app.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/app.controllers.js" afterPath="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
@@ -30,11 +31,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="app.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/www/modules/app/app.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="app.controllers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modules/app/app.controllers.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -43,10 +54,10 @@
       <file leaf-file-name="ionic-datepicker-modal.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.916666">
-              <caret line="70" column="48" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="48" />
+            <state vertical-scroll-proportion="-24.375">
+              <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
               <folding>
-                <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+                <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -55,10 +66,10 @@
       <file leaf-file-name="ionic-datepicker-popup.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.375">
-              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state vertical-scroll-proportion="-1.875">
+              <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
               <folding>
-                <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+                <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -67,8 +78,18 @@
       <file leaf-file-name="ionic-datepicker.provider.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.593949">
-              <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.66719747">
+              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ionic.app.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.4615386">
+              <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -77,7 +98,7 @@
       <file leaf-file-name="tab-dash.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/modules/app/templates/tab-dash.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5">
+            <state vertical-scroll-proportion="0.0">
               <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#ion-view#0;n#!!top" expanded="true" />
@@ -131,10 +152,11 @@
         <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
         <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
         <option value="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" />
-        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
-        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/app.config.js" />
         <option value="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
         <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
         <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
       </list>
     </option>
@@ -179,6 +201,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,7 +317,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -411,6 +433,60 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/www/modules/app/app.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/app/app.controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="48" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="48" />
+          <folding>
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <folding>
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/app/templates/tab-dash.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#ion-view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/app/app.controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -424,7 +500,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -434,7 +510,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="54" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -478,7 +554,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -488,7 +564,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="63" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="63" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -532,7 +608,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -542,7 +618,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="21" selection-start-line="22" selection-start-column="12" selection-end-line="24" selection-end-column="21" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -586,7 +662,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="46" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -596,7 +672,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="44" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="44" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -640,7 +716,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="31" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="31" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -650,7 +726,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="44" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="44" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -723,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/app/templates/tab-dash.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#ion-view#0;n#!!top" expanded="true" />
@@ -731,46 +807,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/www/modules/app/app.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/app/app.controllers.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+          <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/ionic.app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42634314">
-          <caret line="166" column="19" selection-start-line="166" selection-start-column="19" selection-end-line="166" selection-end-column="19" />
+        <state vertical-scroll-proportion="-2.4615386">
+          <caret line="161" column="30" selection-start-line="161" selection-start-column="30" selection-end-line="161" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375">
-          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="1909:2215" placeholder="{...}" />
+            <marker date="1458067539000" expanded="true" signature="2114:2454" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.916666">
-          <caret line="70" column="48" selection-start-line="70" selection-start-column="21" selection-end-line="70" selection-end-column="48" />
+        <state vertical-scroll-proportion="-24.375">
+          <caret line="39" column="88" selection-start-line="39" selection-start-column="88" selection-end-line="39" selection-end-column="88" />
           <folding>
-            <marker date="1458041515000" expanded="true" signature="2289:2595" placeholder="{...}" />
+            <marker date="1458067781000" expanded="true" signature="2470:2812" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.593949">
-          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.66719747">
+          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
           <folding />
         </state>
       </provider>

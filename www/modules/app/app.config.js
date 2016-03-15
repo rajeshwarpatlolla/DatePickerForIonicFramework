@@ -15,8 +15,7 @@ angular.module('starter')
       dateFormat: 'dd MMMM yyyy',
       closeOnSelect: false,
       disableWeekdays: [6],
-      from: new Date(2012, 8, 2),
-      to: new Date(2018, 8, 25)
+      from: new Date(2012, 8, 1)
     };
 
     ionicDatePikerProvider.configDatePicker(datePickerObj);

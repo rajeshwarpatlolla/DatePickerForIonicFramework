@@ -85,7 +85,7 @@ $pc2: #00796B;
     }
     .pointer_events_none {
       pointer-events: none;
-      color: #aaaaaa;
+      color: #aaaaaa !important;
     }
     .month_select, .year_select {
       border: none;
@@ -159,13 +159,16 @@ $pc2: #00796B;
   }
   .pointer_events_none {
     pointer-events: none;
-    color: #aaaaaa;
+    color: #aaaaaa !important;
   }
   .date_col {
 
   }
   .select_section {
     padding: 1px 5px;
+  }
+  .button-clear {
+    color: $pc1;
   }
   .month_select, .year_select {
     border: none;

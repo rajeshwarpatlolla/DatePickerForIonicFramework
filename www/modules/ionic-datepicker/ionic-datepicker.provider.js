@@ -76,6 +76,7 @@ angular.module('ionic-datepicker.providers', [])
         }
       };
 
+      //Set today as date for the modal
       $scope.setIonicDatePickerTodayDate = function () {
         var today = new Date();
         refreshDateList(new Date());
@@ -86,6 +87,7 @@ angular.module('ionic-datepicker.providers', [])
         }
       };
 
+      //Set date for the modal
       $scope.setIonicDatePickerDate = function () {
         $scope.mainObj.callback($scope.selctedDateEpoch);
         closeModal();
@@ -122,14 +124,20 @@ angular.module('ionic-datepicker.providers', [])
 
         $scope.dayList = [];
 
+        var tempDate, disabled;
+        $scope.firstDayEpoch = resetHMSM(new Date(currentDate.getFullYear(), currentDate.getMonth(), firstDay)).getTime();
+        $scope.lastDayEpoch = resetHMSM(new Date(currentDate.getFullYear(), currentDate.getMonth(), lastDay)).getTime();
+
         for (var i = firstDay; i <= lastDay; i++) {
-          var tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+          tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
+          disabled = (tempDate.getTime() < $scope.fromDate) || (tempDate.getTime() > $scope.toDate);
           $scope.dayList.push({
             date: tempDate.getDate(),
             month: tempDate.getMonth(),
             year: tempDate.getFullYear(),
             day: tempDate.getDay(),
-            epoch: tempDate.getTime()
+            epoch: tempDate.getTime(),
+            disabled: disabled
           });
         }
 
@@ -164,6 +172,7 @@ angular.module('ionic-datepicker.providers', [])
         refreshDateList($scope.currentDate);
       };
 
+      //Setting up the initial object
       function setInitialObj(ipObj) {
         $scope.mainObj = angular.copy(ipObj);
         $scope.selctedDateEpoch = resetHMSM($scope.mainObj.inputDate).getTime();
@@ -204,9 +213,14 @@ angular.module('ionic-datepicker.providers', [])
 
       //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
-
-        $scope.mainObj = angular.extend({}, config, ipObj);
         var buttons = [];
+        $scope.mainObj = angular.extend({}, config, ipObj);
+        if ($scope.mainObj.from) {
+          $scope.fromDate = resetHMSM(new Date($scope.mainObj.from)).getTime();
+        }
+        if ($scope.mainObj.to) {
+          $scope.toDate = resetHMSM(new Date($scope.mainObj.to)).getTime();
+        }
 
         if (ipObj.disableWeekdays && config.disableWeekdays) {
           $scope.mainObj.disableWeekdays = ipObj.disableWeekdays.concat(config.disableWeekdays);

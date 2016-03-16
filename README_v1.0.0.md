@@ -3,39 +3,42 @@
 ##Introduction:
 
 This is an `ionic-datepicker` bower component, which can be used in any Ionic framework's application. No additional plugins required for this component.
+This plugin is completely open source. Please rate this plugin @ [Ionic Market](http://market.ionic.io/plugins/ionicdatepicker)
 
 [View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo")
 
 ##Prerequisites.
 
-* node.js
-* npm
+* node.js, npm
+* ionic
 * bower
 * gulp
 
 ##How to use:
 
-1) In your project repository install the ionic-datepicker using bower
+1) In your project folder, please install this plugin using bower
 
 `bower install ionic-datepicker --save`
 
-This will install the latest version released.
+This will install the latest version of this plugin. If you wish to install any specific version(eg : 0.9.0) then
+ 
+`bower install ionic-datepicker@0.9.0 --save`
 
-2) Give the path of  `ionic-datepicker.bundle.min.js` in your `index.html` file.
+2) Specify the path of  `ionic-datepicker.bundle.min.js` in your `index.html` file.
 
 ````html
-<!-- path to ionic/angularjs -->
+<!-- path to ionic -->
 <script src="lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js"></script>
 ````
 
-3) In your application module inject the dependency `ionic-datepicker`, in order to work with the ionic time picker
+3) In your application's main module, inject the dependency `ionic-datepicker`, in order to work with this plugin
 ````javascript
 angular.module('mainModuleName', ['ionic', 'ionic-datepicker']){
 //
 }
 ````
 
-4) You can configure this date picker at the application level in the config method using the `ionicDatePicker` provider.
+4) You can configure this date picker at application level in the config method using the `ionicDatePicker` provider.
 Your config method may look like this if you wish to setup the configuration. But this is not mandatory step.
 
 ````javascript
@@ -59,7 +62,7 @@ Your config method may look like this if you wish to setup the configuration. Bu
     ionicDatePickerProvider.configDatePicker(datePickerObj);
   })
 ````
- In the above code i am not configuring all the properties, but you can configure as many as you can.
+In the above code i am not configuring all the properties, but you can configure as many properties as you can.
  
 The properties you can configure are as follows.
 
@@ -111,44 +114,48 @@ The properties you can configure are as follows.
 
 **l) dateFormat**(Optional) : This is date format used in template. Defaults to `dd-MM-yyyy`. For how to format date, see: http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15
 
-**m) closeOnSelect**(Optional) : Boolean to indicate wheteher datepicker will be closed after date selection. If set to `true`, "Set" button will be hidden. Defaults to `false`.
+**m) showTodayButton**(Optional) : Boolean to specify whether to show the `Today` button or not. The default values is `true`.
 
-**n) disableWeekdays**(Optional) : Accespts array of numbers starting from 0(Sunday) to 6(Saturday). If you specify any values for this array, then it will disable that week day in the whole calendar. For example if you pass [0,6], then all the Sundays and Saturdays will be disabled.
+**n) closeOnSelect**(Optional) : Boolean to indicate whether date picker popup/modal will be closed after selection. If set to `true`, `Set` button will be hidden. The default value is `false`.
+
+**o) disableWeekdays**(Optional) : Accepts array of numbers starting from 0(Sunday) to 6(Saturday). If you specify any values for this array, then it will disable that week day in the whole calendar. For example if you pass [0,6], then all the Sundays and Saturdays will be disabled.
 
 5) Inject `ionicDatePicker` in the controller, where you wish to use this component. Then using the below method you can call the datepicker.
 ````javascript
-ionicDatePicker.openDatePicker(ipObj1);
-````
-The object you are passing to the above method could be as shown below.
+.controller('HomeCtrl', function ($scope, ionicDatePicker) {
 
-````javascript
-var ipObj1 = {
-        callback: function (val) {  //Mandatory
-          console.log('Return value from the datepicker popup is : ' + val, new Date(val));
-        },
-        disabledDates: [
-          new Date(2016, 2, 16),
-          new Date(2015, 3, 16),
-          new Date(2015, 4, 16),
-          new Date(2015, 5, 16),
-          new Date('Wednesday, August 12, 2015'),
-          new Date("08-16-2016"),
-          new Date(1439676000000)
-        ],
-        from: new Date(2012, 1, 1),
-        to: new Date(2016, 10, 30),
-        inputDate: new Date(),
-        mondayFirst: true,
-        disableWeekdays: [0],
-        closeOnSelect: false,
-        templateType: 'popup'
-      };
+    var ipObj1 = {
+      callback: function (val) {  //Mandatory
+        console.log('Return value from the datepicker popup is : ' + val, new Date(val));
+      },
+      disabledDates: [            //Optional
+        new Date(2016, 2, 16),
+        new Date(2015, 3, 16),
+        new Date(2015, 4, 16),
+        new Date(2015, 5, 16),
+        new Date('Wednesday, August 12, 2015'),
+        new Date("08-16-2016"),
+        new Date(1439676000000)
+      ],
+      from: new Date(2012, 1, 1), //Optional
+      to: new Date(2016, 10, 30), //Optional
+      inputDate: new Date(),      //Optional
+      mondayFirst: true,          //Optional
+      disableWeekdays: [0],       //Optional
+      closeOnSelect: false,       //Optional
+      templateType: 'popup'       //Optional
+    };
+  
+    $scope.openDatePicker = function(){
+      ionicDatePicker.openDatePicker(ipObj1);
+    };
+};
 ````
-    
-Apart from the config method, if you again set any of the properties, they will be overriden. So please cross check with the config method you have set, while setting the variables at the config method as well as in the controller.
-    
-In all the above steps the only mandatory thing is the callback where you will receive the selected date value.
-    
+
+Apart from the config method, you can re configure all options in the controller also. If you again set any of the properties, they will be overridden by the values mentioned in the controller. This will be useful if there are multiple date pickers in the app, which has different properties.
+
+In all the above steps the only mandatory thing is the `callback` where you will get the selected date value.
+
     
 ##Screen Shots:
 

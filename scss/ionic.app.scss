@@ -7,7 +7,7 @@ For example, you might change some of the default colors:
 
 $light: #fff !default;
 $stable: #f8f8f8 !default;
-//$positive:                        #387ef5 !default;
+//$positive: #387ef5 !default;
 $positive: #009688 !default;
 $calm: #11c1f3 !default;
 $balanced: #33cd5f !default;
@@ -207,4 +207,24 @@ $pc2: #00796B;
   .font_22px {
     font-size: 22px;
   }
+}
+
+.font_28px {
+  font-size: 28px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.white_space_normal {
+  white-space: normal;
+}
+
+.margin_zero {
+  margin: 0 !important;
+}
+
+ion-view {
+  background-color: #eee !important;
 }

@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', function ($scope, ionicDatePicker) {
+  .controller('HomeCtrl', function ($scope, ionicDatePicker) {
 
     $scope.selectedDate1;
     $scope.selectedDate2;
@@ -57,10 +57,10 @@ angular.module('starter.controllers', [])
     }
   })
 
-  .controller('ChatsCtrl', function ($scope) {
+  .controller('ListCtrl', function ($scope) {
 
   })
 
-  .controller('AccountCtrl', function ($scope) {
+  .controller('ContactCtrl', function ($scope) {
 
   });

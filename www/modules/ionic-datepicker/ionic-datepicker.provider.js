@@ -11,7 +11,7 @@ angular.module('ionic-datepicker.providers', [])
       weeksList: ["S", "M", "T", "W", "T", "F", "S"],
       monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
       templateType: 'popup',
-      showTodayButton: true,
+      showTodayButton: false,
       closeOnSelect: false,
       disableWeekdays: []
     };
@@ -154,8 +154,8 @@ angular.module('ionic-datepicker.providers', [])
 
         $scope.currentMonth = $scope.mainObj.monthsList[currentDate.getMonth()];
         $scope.currentYear = currentDate.getFullYear();
-        $scope.currentMonthSelected = $scope.currentMonth;
-        $scope.currentYearSelected = $scope.currentYear;
+        $scope.currentMonthSelected = angular.copy($scope.currentMonth);
+        $scope.currentYearSelected = angular.copy($scope.currentYear);
         $scope.numColumns = 7;
       }
 
@@ -198,6 +198,10 @@ angular.module('ionic-datepicker.providers', [])
         $scope.modal = modal;
       });
 
+      $scope.$on('$destroy', function () {
+        $scope.modal.remove();
+      });
+
       function openModal() {
         $scope.modal.show();
       }
@@ -227,7 +231,6 @@ angular.module('ionic-datepicker.providers', [])
         setInitialObj($scope.mainObj);
 
         if (!$scope.mainObj.closeOnSelect) {
-
           buttons = [{
             text: $scope.mainObj.setLabel,
             type: 'button_set',
@@ -235,30 +238,30 @@ angular.module('ionic-datepicker.providers', [])
               $scope.mainObj.callback($scope.selctedDateEpoch);
             }
           }];
+        }
 
-          if ($scope.mainObj.showTodayButton) {
-            buttons.push({
-              text: $scope.mainObj.todayLabel,
-              type: 'button_today',
-              onTap: function (e) {
-                var today = new Date();
-                refreshDateList(new Date());
-                $scope.selctedDateEpoch = resetHMSM(today).getTime();
-                if (!$scope.mainObj.closeOnSelect) {
-                  e.preventDefault();
-                }
-              }
-            })
-          }
-
+        if ($scope.mainObj.showTodayButton) {
           buttons.push({
-            text: $scope.mainObj.closeLabel,
-            type: 'button_close',
+            text: $scope.mainObj.todayLabel,
+            type: 'button_today',
             onTap: function (e) {
-              $scope.mainObj.callback(undefined);
+              var today = new Date();
+              refreshDateList(new Date());
+              $scope.selctedDateEpoch = resetHMSM(today).getTime();
+              if (!$scope.mainObj.closeOnSelect) {
+                e.preventDefault();
+              }
             }
           });
         }
+
+        buttons.push({
+          text: $scope.mainObj.closeLabel,
+          type: 'button_close',
+          onTap: function (e) {
+            console.log('ionic-datepicker popup closed.');
+          }
+        });
 
         if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
           $scope.popup = $ionicPopup.show({
@@ -268,6 +271,7 @@ angular.module('ionic-datepicker.providers', [])
             buttons: buttons
           });
         } else {
+          console.log($scope.mainObj);
           openModal();
         }
       };

@@ -9868,3 +9868,18 @@ a.button {
 
 .ionic_datepicker_modal .font_22px {
   font-size: 22px; }
+
+.font_28px {
+  font-size: 28px !important; }
+
+a {
+  text-decoration: none; }
+
+.white_space_normal {
+  white-space: normal; }
+
+.margin_zero {
+  margin: 0 !important; }
+
+ion-view {
+  background-color: #eee !important; }

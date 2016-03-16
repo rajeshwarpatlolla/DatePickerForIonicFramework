@@ -8,34 +8,34 @@ angular.module('starter')
         abstract: true,
         templateUrl: 'modules/app/templates/tabs.html'
       })
-      .state('tab.dash', {
-        url: '/dash',
+      .state('tab.home', {
+        url: '/home',
         views: {
-          'tab-dash': {
-            templateUrl: 'modules/app/templates/tab-dash.html',
-            controller: 'DashCtrl'
+          'tab-home': {
+            templateUrl: 'modules/app/templates/tab-home.html',
+            controller: 'HomeCtrl'
           }
         }
       })
-      .state('tab.chats', {
-        url: '/chats',
+      .state('tab.list', {
+        url: '/list',
         views: {
-          'tab-chats': {
-            templateUrl: 'modules/app/templates/tab-chats.html',
-            controller: 'ChatsCtrl'
+          'tab-list': {
+            templateUrl: 'modules/app/templates/tab-list.html',
+            controller: 'ListCtrl'
           }
         }
       })
-      .state('tab.account', {
-        url: '/account',
+      .state('tab.contact', {
+        url: '/contact',
         views: {
-          'tab-account': {
-            templateUrl: 'modules/app/templates/tab-account.html',
-            controller: 'AccountCtrl'
+          'tab-contact': {
+            templateUrl: 'modules/app/templates/tab-contact.html',
+            controller: 'ContactCtrl'
           }
         }
       });
 
-    $urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('/tab/home');
 
   });

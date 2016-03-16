@@ -145,12 +145,39 @@ var ipObj1 = {
       };
 ````
     
-Apart from the config method, if you again set any of the properties, they will be overriden. So be careful while setting the variables at the config method as well as in the controller.
+Apart from the config method, if you again set any of the properties, they will be overriden. So please cross check with the config method you have set, while setting the variables at the config method as well as in the controller.
     
 In all the above steps the only mandatory thing is the callback where you will receive the selected date value.
     
     
-    
+##Screen Shots:
+
+Once you are successfully done with the above steps, you should be able to see the below screen shots.
+I have used two buttons here.
+
+The first screen shot shows only the buttons before clicking on them.
+Once you click on the button you should see the second screen shot.
+
+<img src="https://lh3.googleusercontent.com/IeNOa_UmMpRhWCP4Hl2Cc4ZO1YuwNAd4vmKBYzsX2FY=w434-h678-no" width="300" height="450" />
+<img src="https://lh3.googleusercontent.com/IGjqpsiPj1_92DTiW2oJcSvBTdp93PGOYEk4VzQiABg=w442-h678-no" width="300" height="450" />
+
+
+##CSS Classes:
+
+<img src="https://lh3.googleusercontent.com/tX9IyFN9w3GigHnltCJCdSj1Df5OjDDqxPXmNr7oAdQ=w423-h634-no" width="300" height="450" />
+
+#### 1) ionic_datepicker_modal_content
+#### 2) selected_date_full
+#### 3) left_arrow
+#### 4) drop_down
+#### 5) month_dropdown
+#### 6) year_dropdown
+#### 7) right_arrow
+#### 8) date_col
+#### 9) date_selected
+#### 10) calendar_grid
+
+
     
     
     
@@ -277,14 +304,14 @@ b) You can invoke the datepicker from the controller.
 [MIT](https://github.com/rajeshwarpatlolla/ionic-datepicker/blob/master/LICENSE.MD "MIT")
 
 ##Contact:
-gmail : rajeshwar.patlolla@gmail.com
+Gmail : rajeshwar.patlolla@gmail.com
 
-github : https://github.com/rajeshwarpatlolla
+Github : https://github.com/rajeshwarpatlolla
 
-twitter : https://twitter.com/rajeshwar_9032
+Twitter : https://twitter.com/rajeshwar_9032
 
-facebook : https://www.facebook.com/rajeshwarpatlolla
+Facebook : https://www.facebook.com/rajeshwarpatlolla
 
-paypal : rajeshwar.patlolla@gmail.com
+Paypal : rajeshwar.patlolla@gmail.com
 
 Comment or Rate it : http://market.ionic.io/plugins/ionicdatepicker

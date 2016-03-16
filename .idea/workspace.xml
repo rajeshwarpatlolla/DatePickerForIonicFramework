@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README_v1.0.0.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/app.config.js" afterPath="$PROJECT_DIR$/www/modules/app/app.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/app.controllers.js" afterPath="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" afterPath="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/css/ionic.app.min.css" afterPath="$PROJECT_DIR$/www/css/ionic.app.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/ionic.app.scss" afterPath="$PROJECT_DIR$/scss/ionic.app.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" afterPath="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README_v1.0.0.md" afterPath="$PROJECT_DIR$/README_v1.0.0.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DatePickerForIonicFramework.iws" />
@@ -133,8 +124,8 @@
       <file leaf-file-name="README_v1.0.0.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README_v1.0.0.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64057505">
-              <caret line="272" column="75" selection-start-line="0" selection-start-column="0" selection-end-line="289" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.6884984">
+              <caret line="168" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="316" selection-end-column="67" />
               <folding />
             </state>
           </provider>
@@ -913,8 +904,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README_v1.0.0.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64057505">
-          <caret line="272" column="75" selection-start-line="0" selection-start-column="0" selection-end-line="289" selection-end-column="67" />
+        <state vertical-scroll-proportion="0.6884984">
+          <caret line="168" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="316" selection-end-column="67" />
           <folding />
         </state>
       </provider>

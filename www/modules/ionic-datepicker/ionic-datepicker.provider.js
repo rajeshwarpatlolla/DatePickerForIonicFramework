@@ -1,6 +1,6 @@
 angular.module('ionic-datepicker.providers', [])
 
-  .provider('ionicDatePiker', function () {
+  .provider('ionicDatePicker', function () {
 
     var config = {
       setLabel: 'Set',
@@ -23,6 +23,7 @@ angular.module('ionic-datepicker.providers', [])
     this.$get = function ($rootScope, $ionicPopup, $ionicModal, IonicDatepickerService) {
 
       var provider = {};
+
       var $scope = $rootScope.$new();
       $scope.today = resetHMSM(new Date()).getTime();
       $scope.disabledDates = [];
@@ -42,10 +43,8 @@ angular.module('ionic-datepicker.providers', [])
           $scope.currentDate.setFullYear($scope.currentDate.getFullYear());
         }
         $scope.currentDate.setMonth($scope.currentDate.getMonth() - 1);
-
         $scope.currentMonth = $scope.mainObj.monthsList[$scope.currentDate.getMonth()];
         $scope.currentYear = $scope.currentDate.getFullYear();
-
         refreshDateList($scope.currentDate);
       };
 
@@ -130,7 +129,8 @@ angular.module('ionic-datepicker.providers', [])
 
         for (var i = firstDay; i <= lastDay; i++) {
           tempDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), i);
-          disabled = (tempDate.getTime() < $scope.fromDate) || (tempDate.getTime() > $scope.toDate);
+          disabled = (tempDate.getTime() < $scope.fromDate) || (tempDate.getTime() > $scope.toDate) || $scope.mainObj.disableWeekdays.indexOf(tempDate.getDay()) >= 0;
+
           $scope.dayList.push({
             date: tempDate.getDate(),
             month: tempDate.getMonth(),
@@ -154,7 +154,7 @@ angular.module('ionic-datepicker.providers', [])
 
         $scope.currentMonth = $scope.mainObj.monthsList[currentDate.getMonth()];
         $scope.currentYear = currentDate.getFullYear();
-        $scope.currentMonthSelected = angular.copy($scope.currentMonth);
+        $scope.currentMonthSelected = $scope.currentMonth;
         $scope.currentYearSelected = $scope.currentYear;
         $scope.numColumns = 7;
       }
@@ -183,8 +183,7 @@ angular.module('ionic-datepicker.providers', [])
           $scope.weeksList = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
         }
         if ($scope.mainObj.mondayFirst) {
-          var lastWeekDay = $scope.mainObj.weeksList.shift();
-          $scope.weeksList.push(lastWeekDay);
+          $scope.weeksList.push($scope.mainObj.weeksList.shift());
         }
         $scope.disableWeekdays = $scope.mainObj.disableWeekdays;
 
@@ -231,7 +230,7 @@ angular.module('ionic-datepicker.providers', [])
 
           buttons = [{
             text: $scope.mainObj.setLabel,
-            //type: $scope.mainObj.setButtonType,
+            type: 'button_set',
             onTap: function (e) {
               $scope.mainObj.callback($scope.selctedDateEpoch);
             }
@@ -240,7 +239,7 @@ angular.module('ionic-datepicker.providers', [])
           if ($scope.mainObj.showTodayButton) {
             buttons.push({
               text: $scope.mainObj.todayLabel,
-              //type: $scope.mainObj.todayButtonType,
+              type: 'button_today',
               onTap: function (e) {
                 var today = new Date();
                 refreshDateList(new Date());
@@ -254,7 +253,7 @@ angular.module('ionic-datepicker.providers', [])
 
           buttons.push({
             text: $scope.mainObj.closeLabel,
-            //type: $scope.mainObj.closeButtonType,
+            type: 'button_close',
             onTap: function (e) {
               $scope.mainObj.callback(undefined);
             }
@@ -264,24 +263,16 @@ angular.module('ionic-datepicker.providers', [])
         if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
           $scope.popup = $ionicPopup.show({
             templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
-            //title: $scope.mainObj.titleLabel,
-            //subTitle: 'Please use normal things',
             scope: $scope,
             cssClass: 'ionic_datepicker_popup',
             buttons: buttons
           });
-
-          $scope.popup.then(function (res) {
-            console.log('Closed', res);
-          });
         } else {
           openModal();
         }
-
       };
 
       return provider;
 
     };
-
   });

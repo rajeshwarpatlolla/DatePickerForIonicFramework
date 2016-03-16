@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-  .controller('DashCtrl', function ($scope, ionicDatePiker) {
+  .controller('DashCtrl', function ($scope, ionicDatePicker) {
 
     $scope.selectedDate1;
     $scope.selectedDate2;
@@ -8,7 +8,7 @@ angular.module('starter.controllers', [])
     $scope.openDatePickerOne = function (val) {
       var ipObj1 = {
         callback: function (val) {  //Mandatory
-          console.log('Return value from the datepicker is : ' + val, new Date(val));
+          console.log('Return value from the datepicker popup is : ' + val, new Date(val));
           $scope.selectedDate1 = new Date(val);
         },
         disabledDates: [
@@ -28,13 +28,13 @@ angular.module('starter.controllers', [])
         closeOnSelect: false,
         templateType: 'popup'
       };
-      ionicDatePiker.openDatePicker(ipObj1);
+      ionicDatePicker.openDatePicker(ipObj1);
     };
 
     $scope.openDatePickerTwo = function (val) {
       var ipObj1 = {
         callback: function (val) {  //Mandatory
-          console.log('Return value from the datepicker is : ' + val, new Date(val));
+          console.log('Return value from the datepicker modal is : ' + val, new Date(val));
           $scope.selectedDate2 = new Date(val);
         },
         disabledDates: [
@@ -50,11 +50,10 @@ angular.module('starter.controllers', [])
         to: new Date(2016, 8, 25),
         inputDate: new Date(),
         mondayFirst: true,
-        disableWeekdays: [0],
         closeOnSelect: false,
         templateType: 'modal'
       };
-      ionicDatePiker.openDatePicker(ipObj1);
+      ionicDatePicker.openDatePicker(ipObj1);
     }
   })
 

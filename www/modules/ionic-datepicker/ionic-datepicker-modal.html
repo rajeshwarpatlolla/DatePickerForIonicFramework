@@ -1,10 +1,10 @@
-<ion-modal-view class="ionic_datepicker_modal_view">
+<ion-modal-view class="ionic_datepicker_modal">
   <ion-header-bar class="header">
     <h1 class="title">{{selctedDateEpoch | date : mainObj.dateFormat}}</h1>
   </ion-header-bar>
   <ion-content class="ionic_datepicker_modal_content">
     <div class="">
-      <div class="row">
+      <div class="row text-center">
         <div class="col col-10 left_arrow">
           <button class="button-clear font_22px" ng-click="prevMonth()"
                   ng-class="{'pointer_events_none':((firstDayEpoch - 86400000) < fromDate)}">
@@ -52,7 +52,7 @@
             <div class="col padding_zero date_col" ng-repeat="col in cols track by $index"
                  ng-class="{'selected_date': (dayList[row + $index].epoch === selctedDateEpoch),
                       'today' : (dayList[row + $index].epoch == today),
-                      'pointer_events_none':((disabledDates.indexOf(dayList[row + $index].epoch) >= 0) ||(disableWeekdays.indexOf(dayList[row + $index].day) >= 0) || (dayList[row + $index].disabled))}"
+                      'pointer_events_none':((disabledDates.indexOf(dayList[row + $index].epoch) >= 0) || (dayList[row + $index].disabled))}"
                  ng-click="dateSelected(dayList[row + $index])">
               <div class="date_cell">
                 {{dayList[row + col].date}}
@@ -65,17 +65,16 @@
   </ion-content>
   <ion-footer-bar class="footer">
     <div class="row padding_zero">
-      <div class="text-center" ng-class="{'col-33': !closeOnSelect, 'col-50': closeOnSelect}"
-           ng-click="closeIonicDatePickerModal()">
-        <button class="button button-clear">Close</button>
-      </div>
-      <div class="text-center" ng-class="{'col-34': !closeOnSelect, 'col-50': closeOnSelect}"
-           ng-click="setIonicDatePickerTodayDate()">
-        <button class="button button-clear">Today</button>
-      </div>
-      <div ng-if="!closeOnSelect" class="col-33 text-center" ng-click="setIonicDatePickerDate()">
-        <button class="button button-clear">Set</button>
-      </div>
+      <button class="button button-clear button-block button_set" ng-if="!closeOnSelect"
+              ng-click="setIonicDatePickerDate()">Set
+      </button>
+      <button class="button button-clear button-block button_today"
+              ng-click="setIonicDatePickerTodayDate()">Today
+      </button>
+
+      <button class="button button-clear button-block button_close"
+              ng-click="closeIonicDatePickerModal()">Close
+      </button>
     </div>
   </ion-footer-bar>
 </ion-modal-view>

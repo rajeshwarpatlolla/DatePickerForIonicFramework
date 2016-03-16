@@ -140,20 +140,23 @@ $pc2: #00796B;
   }
 }
 
-.ionic_datepicker_modal_view {
+.ionic_datepicker_modal {
   .header, .footer {
     background-color: $pc1;
     .title, .button {
       color: #ffffff;
     }
   }
+  .footer {
+    .button-block {
+      margin: 0;
+    }
+  }
   .today {
     border: 1px solid $pc1;
-    border-radius: 50%;
   }
   .selected_date {
     background-color: $pc1;
-    border-radius: 50%;
     color: #fff;
     font-weight: bold;
   }

@@ -1,6 +1,6 @@
 angular.module('starter')
 
-  .config(function (ionicDatePikerProvider) {
+  .config(function (ionicDatePickerProvider) {
 
     var datePickerObj = {
       setLabel: 'Set2',
@@ -18,6 +18,6 @@ angular.module('starter')
       from: new Date(2012, 8, 1)
     };
 
-    ionicDatePikerProvider.configDatePicker(datePickerObj);
+    ionicDatePickerProvider.configDatePicker(datePickerObj);
 
   });

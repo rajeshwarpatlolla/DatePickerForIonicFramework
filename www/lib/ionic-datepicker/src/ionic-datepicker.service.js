@@ -1,4 +1,4 @@
-angular.module('ionic-datepicker.services', [])
+angular.module('ionic-datepicker.service', [])
 
   .service('IonicDatepickerService', function () {
 

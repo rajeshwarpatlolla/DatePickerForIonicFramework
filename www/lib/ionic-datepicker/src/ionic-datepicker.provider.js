@@ -1,4 +1,4 @@
-angular.module('ionic-datepicker.providers', [])
+angular.module('ionic-datepicker.provider', [])
 
   .provider('ionicDatePicker', function () {
 
@@ -20,7 +20,7 @@ angular.module('ionic-datepicker.providers', [])
       angular.extend(config, inputObj);
     };
 
-    this.$get = function ($rootScope, $ionicPopup, $ionicModal, IonicDatepickerService) {
+    this.$get = ['$rootScope', '$ionicPopup', '$ionicModal', 'IonicDatepickerService', function ($rootScope, $ionicPopup, $ionicModal, IonicDatepickerService) {
 
       var provider = {};
 
@@ -191,7 +191,7 @@ angular.module('ionic-datepicker.providers', [])
         setDisabledDates($scope.mainObj);
       }
 
-      $ionicModal.fromTemplateUrl('modules/ionic-datepicker/ionic-datepicker-modal.html', {
+      $ionicModal.fromTemplateUrl('ionic-datepicker-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
@@ -265,7 +265,7 @@ angular.module('ionic-datepicker.providers', [])
 
         if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
           $scope.popup = $ionicPopup.show({
-            templateUrl: 'modules/ionic-datepicker/ionic-datepicker-popup.html',
+            templateUrl: 'ionic-datepicker-popup.html',
             scope: $scope,
             cssClass: 'ionic_datepicker_popup',
             buttons: buttons
@@ -277,5 +277,6 @@ angular.module('ionic-datepicker.providers', [])
 
       return provider;
 
-    };
+    }];
+
   });

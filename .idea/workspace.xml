@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4625f474-37f4-4015-99d5-059706c964d2" name="Default" comment="" />
+    <list default="true" id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="DatePickerForIonicFramework.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,22 +30,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/date-picker-modal2.html" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/date-picker-modal.html" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/bower.json" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/package.json" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/ionic-datepicker.service.js" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/style.css" />
-        <option value="$PROJECT_DIR$/www/templates/date-picker.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/ionic-datepicker.app.js" />
-        <option value="$PROJECT_DIR$/www/index.html" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/README.md" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/ionic-datepicker.directive.js" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/ionic-datepicker-popup.html" />
-        <option value="$PROJECT_DIR$/www/js/controllers.js" />
-        <option value="$PROJECT_DIR$/www/lib/ionic-datepicker/src/ionic-datepicker-modal.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/js/app.controllers.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/templates/tab-dash.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.config.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.controllers.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.factories.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.route.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.run.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionc-datepicker/ionic-datepicker.services.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.services.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.route.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.route.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/templates/tab-account.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/templates/tab-chats.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/index.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.factories.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.module.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.controllers.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.module.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.factories.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.provider.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.services.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/ionic.project" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.config.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/templates/tab-dash.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/app/app.controllers.js" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
+        <option value="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
+        <option value="$PROJECT_DIR$/www/modules/app/templates/tab-dash.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/templates/tabs.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/templates/tab-home.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/templates/tab-list.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/templates/tab-contact.html" />
+        <option value="$PROJECT_DIR$/www/modules/app/app.route.js" />
+        <option value="$PROJECT_DIR$/www/modules/app/app.controllers.js" />
+        <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/scss/ionic.app.scss" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-modal.html" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker-popup.html" />
+        <option value="$PROJECT_DIR$/README_v1.0.0.md" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.module.js" />
+        <option value="$PROJECT_DIR$/www/modules/app/app.config.js" />
+        <option value="$PROJECT_DIR$/www/modules/app/app.module.js" />
+        <option value="$PROJECT_DIR$/www/modules/dist/ionic-datepicker.bundle.min.js" />
+        <option value="$PROJECT_DIR$/www/modules/ionic-datepicker/ionic-datepicker.provider.js" />
+        <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -82,7 +119,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -101,68 +137,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DatePickerForIonicFramework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ionic-datepicker" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/www/lib/ionic-datepicker/src" />
+      <recent name="$PROJECT_DIR$/www/modules/dist" />
+      <recent name="$PROJECT_DIR$/www/modules/ionic-datepicker" />
+      <recent name="$PROJECT_DIR$/www/modules" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/DatePickerForIonicFramework" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DatePickerForIonicFramework/www/modules/src" />
+      <recent name="$PROJECT_DIR$/DatePickerForIonicFramework/www" />
+      <recent name="$PROJECT_DIR$/DatePickerForIonicFramework/www/app/modules/src" />
     </key>
   </component>
   <component name="RunManager">
@@ -211,25 +210,23 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4625f474-37f4-4015-99d5-059706c964d2" name="Default" comment="" />
-      <created>1439887893603</created>
+      <changelist id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="" />
+      <created>1456313109185</created>
       <option name="number" value="Default" />
-      <updated>1439887893603</updated>
+      <updated>1456313109185</updated>
     </task>
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329429" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.568082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2494043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -237,9 +234,11 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -256,5 +255,30 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2519084">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

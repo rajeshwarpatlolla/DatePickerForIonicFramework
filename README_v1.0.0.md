@@ -159,35 +159,45 @@ In all the above steps the only mandatory thing is the `callback` where you will
     
 ##Screen Shots:
 
-Once you are successfully done with the above steps, you should be able to see the below screen shots.
-I have used two buttons here.
+Once you are successfully done with the above steps, you should be able to use this plugin.
 
-The first screen shot shows only the buttons before clicking on them.
-Once you click on the button you should see the second screen shot.
+The first screen shot shows the popup and the second shows the modal of this plugin.
 
-<img src="https://lh3.googleusercontent.com/IeNOa_UmMpRhWCP4Hl2Cc4ZO1YuwNAd4vmKBYzsX2FY=w434-h678-no" width="300" height="450" />
-<img src="https://lh3.googleusercontent.com/IGjqpsiPj1_92DTiW2oJcSvBTdp93PGOYEk4VzQiABg=w442-h678-no" width="300" height="450" />
+### iOS : 
+<img src="https://lh3.googleusercontent.com/F9gGrtafX2G6sIO2Fi62R_SVPBb0dRACiksw-4wNX7lcIbuI40AAodBbko72VMZ8YD5ecg5sCXi6soWWgWuVMtuwd21nRlU8dnkPHR3P8Xw-OZ19Ryt3VBNItI7UP7acA1SJZQPpp-wzPBRaYh-CAAExJ0TCgMT_05h7_OzWS5gTjxk81jqzGL0uE_L0SLq0u57orjzgBWIm1PfcKmczNIU_Dhgqp01yWEP-6ytgJOrKVrr9OXlfrBKm_urdF6W8qg1RrkH_IRDS0hv3sRi2co1doLUMDxZyAO5JUYnRf4WVTttffFdNMSq1LFVldMdwjU7PRWft-_I9lLHX5IvOyYiOhYu9vvkJE29MF3GMW7rYZMf11qABKL8lYWPCJ4GZfG0NJI6u2n52tXd9ZVUl1s_p2H2CnWdlnaSyrfevQDRfO0ej2C6-NceeMAwX16m24GzMnD5xgO7hk6XMG0rZuBNfGvFextvIzOyj6L8W4VRXzaUYlUelM84zDSU5Av8jXHVr-4A8ymqJZniQlYpDsUHIHbFddemlIuIxh4kTSQA0iifTwJ_pGTFESyzrAIGiGQS8=w382-h678-no" width="320" height="568" />
+<img src="https://lh3.googleusercontent.com/qFdG5Gvj0hh_a4C1P-oLO1Ju4qjjGRtyFq27rP1khClavBfVD0LtGfpEqi82xTLR_XHH-8Dj8xOAWv4NMAI5FuG-8Gs13IhcEJC6EObRq82oUSqjzHoV59x335FFKFtXKI8a10NXLtkHBr2MdVa2mb0ktdIjsxis1Y4UNoaEQUnjPX7khdHhdqJZm-R6GyIMixOdFLyOUMPUYdGntZBm87J77BfnFuIz7-t3UF6vHgVZPi0buRbWSUQpFutDGIs6S4YF0hHL8dMefbRG9NhArqn-JMMJKOCWAKpojJmOjPbq9G5O1IQi-nIsfSnogX9vn5xjhozkywf3f4wxQ-0CN4MorldgF-PDEXmfWpFS4XFfBuDkUrtI9Q7MVtTJXLUK1fO01_1ljOUitTnrTPeooOT3Xh7bRcJPPoSsg-QwzeUYCnI6a1IW3bWgxWTM3Ijrn2zBJcxup-SS5-SBBEREhIhZrv30gfN6Z5OkzXInN8a6TQL5EgeC73G0o-sUjSpxOuYwfDKggK__8esm2JZocajDZaQVrpFFZ-Mz0ts10HeNeeCTYBSTwU5vKkHp_O3raUHo=w382-h678-no" width="320" height="568" />
+
+### Android : 
+<img src="https://lh3.googleusercontent.com/iMB88WThVW9om9EwFTaXprMWCXjbm9dm5A9aGjC497seWtX37rjzxynRrnVRYgXN9ORy5gjzhKilgdlt-eB53cXIAovFgqicuJ4UXn-HkLNZflkenUM6_k-sbK-GkNCzCfB1rd3wD5m0zgJ5dhJ3CniDUNKygQbo5f4W7JldSz93nVzdOb3OLqgcmZFeSY-FeWdovQi6zYttUPOaem5_47vF2ikt-ZW6H5UL0FI4WGcJSeAdu7wNsdoE5KY_oQfBTpsbl24eUrTxYPXhoNpcUNxRXjGnF31tDWD-jTEOJZZ9lqTnEK3OZ0g4Rci5jeq_wDmOfT0A11HXICbyL9asAPvB6TNrcOWj_qGUIrJtPeiaRDDgk8GYM2gVBY23xiOW3K5lERIfn6HTSNsZCbQciV0oFBROL3wHNuNGA-3mot_jP9ZJgyHz7f0VrWg5fytot3nDB2Gp4bMWsjXk-VOWoCP3lHc75vOvhOZb1ybemB95JI0RiYCdJMaytjzFWPsS5i3J1yEk0FS4PMyH1HEhYPPB48Et9ullJodL9nxDLvpTxJYzf8yqwC_V-pic-WHNgm9f=w382-h678-no" width="360" height="640" />
+<img src="https://lh3.googleusercontent.com/GzTwRh3IHzF9UieGIJTbQwTIosA101q32OSXEcgDFj7GdG7vHvs9Vj5DpWLj0HOny-zqM6zNRdqAkWlgZv_CnpqLEZNX9EP86xFkknkdtFczd6_63XmlsPgbCiArWAqtVpzjZuhfxPujbm_b52hfyAEBBvNOTrd7VcHmVsZYiwoqVggRYyaOxvEobVxTOF7eB0iXiNIBSnOIFcwla8y9nDFJp2ilgBiMCuI7gEuVW95axHlouFOhyOBILG1u-tO28oLXvqxBnWbZDjjciaKJtB8xBZLH5TsIxyH477dMjTr6SYaykZA1tBHHFlgM9AwrWsnCmaPyP1hNIanCEeuemy9Stt5_2Y5u3el7AwUqGQ7C2ZSYs9nJ0ezHhfTJnF7bpONNWVhHE3G6XpuwKOStUdTli70_mWV8Hx_Ennwdh5FrnjLTnltUve4VCtv3sWNxBxN9_rcwymLneeWIB8X1y8E_ulzxQcMG6YJ3Cf-1WrMRTOR-3SQBgm4R0MQjSau1hgYie6u35dIb0h2FirT540xs4EvUWzT8w4Pv6r9Cze5EsgSHAK54F1In8SG8VtBUCQj4=w382-h678-no" width="360" height="640" />
 
 
 ##CSS Classes:
 
-<img src="https://lh3.googleusercontent.com/tX9IyFN9w3GigHnltCJCdSj1Df5OjDDqxPXmNr7oAdQ=w423-h634-no" width="300" height="450" />
+###popup
+<img src="https://lh3.googleusercontent.com/YT1exTwrRV3SRV9U1Y1BhfYBRH7Af8a9YP2l3cDpMYQhs-owUldhir__RE1AmKInhUa90VgrZXZT-Bq3mITZtZCXjxljratcde3DjSLq2nMz4xOh2K76FxSs3fAJZwtBNhrzvLhWMYbedAVXid70VIqvrdK0-KVyGvT7FiUNsjrquu9gZgVMGiLHzh1uBalmtBR_Gvj1jBpU4kEu7BFPXeVVj7Rv_uUcOxSPY-Ay2snpgZgb5sKON2x_shfZ3DmyzE4a6tk_g4cks9C2hJgoDKgashdX9MOr0UMM6TQm8ZFXbMLe2YtHNhLUTFEAL0B5Zb6Hlwh9Bp4-iHHAFA8ZBhVqpHPc-fXwdJsn8J0Bxo20aBCiMSn7GOdTXf85nMNSAMWcbJQxv-MG14voc-_6YT86wAKMIWOUw6oDbEtnJJ0eTN_3VGAjam-TkNuW0gFOZjBR8kTirmmx1uJfiBAbSKWYhMX0_Efyq_g_5FpIfPJx1cbX3kPwKOy4iC2o-Y_gH0VuYJvskv_nWDQPnXwvV6NKoweqrlWoccOXYQN5IAtiL8zscc5pvrhfr8sESiYZNooP=w382-h678-no" width="360" height="640" />
 
-#### 1) ionic_datepicker_modal_content
-#### 2) selected_date_full
-#### 3) left_arrow
-#### 4) drop_down
-#### 5) month_dropdown
-#### 6) year_dropdown
-#### 7) right_arrow
-#### 8) date_col
-#### 9) date_selected
-#### 10) calendar_grid
+#### 1) prev_btn_section
+#### 2) next_btn_section
+#### 3) select_section
+#### 4) month_select
+#### 5) year_select
+#### 6) calendar_grid
+#### 7) weeks_row
+#### 8) selected_date
+#### 9) date_col
+#### 10) today
 
+###modal
+<img src="https://lh3.googleusercontent.com/7h8H9FRQ9057M5Iy8Ex6e4IWiIjPGWQ33eyUtuQXaqEZptHPht5FuMxQh3z8xoujeXbeSzU2LdEvUMyT_6_epOuPwETV_0KAXFBII4p-wcyvLld7ag4P2Qytl08AUUvzTpJ94lm7lLJvrUtC709SB7D1NRk4KATlmjyGpPYAU2HqY75OETpdV7K_G5onJAN_rcPlFbzLDgPEfM0r8xFibV_7gCVqMtiyNMExyHtqmz1p6PaYlEfdC5QtN4DJROFb98fPOBxLu7PJpIDXO8CZFdNFt49ub2-JRXVmij4F68qVyPTSx9_5drFrHjCDg-Eh0BMM5KMgx1jU1-uvvB-Dh1truRVZnx0OmhQgvvGccc5YjbPFHizdPSBwE-B38FJPQTa39aLYJ5Jc1Ga4QzL9Zz1s6pg2R3VP7q9E5IyyfO5OcxFIC9B9KYvt2l4u0BfvxYw_Mz36DBCE97A_s_8trarJ-q_ErgQgmiIv_AoIZzYufG7Q2kFowSTjhrlXB8s0zsOeyuSb4nisfeY6mPiJRB2owQfc-r6hRlLfUG1IU2X8NbPdE1Zx2sf-f-9k-c3MxV5r=w382-h678-no" width="360" height="640" />
 
-    
-    
-    
+#### 1) left_arrow
+#### 2) right_arrow
+
+Other classes are same as the popup classes. You can use any one of the below classes to customise popup and modal css respectively.  
+####ionic_datepicker_popup
+####ionic_datepicker_modal
+
 ##Versions:
 
 ### 1) v0.1.0
@@ -279,23 +289,30 @@ You can give your custom week names.
 
 **Features**
 
-a) You can configure the ionic datepicker from the config method.
+a) You can configure the ionic-datepicker from the config method.
 
-b) You can invoke the datepicker from the controller.
+b) You can invoke the ionic-datepicker from the controller.
+
+c) New CSS
+
+d) Disabling a particular day of the calendar.
+
+Few more features are also added apart from the above mentioned features.
 
 
 **BugFixes**
 
+[Bug#88](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/88),
+[Bug#94](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/94),
 [Bug#101](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/101),
 [Bug#112](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/112),
 [Bug#114](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/114),
 [Bug#116](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/116),
 [Bug#117](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/117),
-[Bug#119](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/119),
 [Bug#120](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/120),
 [Bug#128](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/128),
+[Bug#129](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/129),
 [Bug#133](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/133),
-[Bug#140](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/140),
 [Bug#145](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/145),
 [Bug#146](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/146),
 [Bug#151](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/151),

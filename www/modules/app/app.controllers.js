@@ -50,6 +50,7 @@ angular.module('starter.controllers', [])
         to: new Date(2016, 8, 25),
         inputDate: new Date(),
         mondayFirst: true,
+        showTodayButton: false,
         closeOnSelect: false,
         templateType: 'modal'
       };

@@ -271,7 +271,6 @@ angular.module('ionic-datepicker.providers', [])
             buttons: buttons
           });
         } else {
-          console.log($scope.mainObj);
           openModal();
         }
       };

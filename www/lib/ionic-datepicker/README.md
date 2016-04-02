@@ -114,7 +114,7 @@ The properties you can configure are as follows.
 
 **l) dateFormat**(Optional) : This is date format used in template. Defaults to `dd-MM-yyyy`. For how to format date, see: http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15
 
-**m) showTodayButton**(Optional) : Boolean to specify whether to show the `Today` button or not. The default values is `true`.
+**m) showTodayButton**(Optional) : Boolean to specify whether to show the `Today` button or not. The default values is `false`.
 
 **n) closeOnSelect**(Optional) : Boolean to indicate whether date picker popup/modal will be closed after selection. If set to `true`, `Set` button will be hidden. The default value is `false`.
 
@@ -175,7 +175,7 @@ The first screen shot shows the popup and the second shows the modal of this plu
 ##CSS Classes:
 
 ###popup
-<img src="https://lh3.googleusercontent.com/F7JON1BYo0R3XZKpo4HnL7daIYBxfAuBb_4qebuTV8CIFO3_0lz6RIgu5RmLSi8Penq6cCQyqB0pYwon3OHQp5_zrCq-stGVu0TsxsWla5dE30Ug29gH2HwAZ2TbqCX5amKXUT8atyEvuq-W53GXIvUt871vWYYBa5C8QQbYfrxTGCpzJLNZtiqwUhBPccvagCECEGrQH5n0eThtxjYbPYq7SDTYrjQNbZhoA0Ff4imL-ZvY-HmXbDqvyyrh2a0ELLZV_k2lyPtq_c8uVSBPreI_niZxP6q0BRSlmGQAfz2Xzwk9ACLSZ4KHWtmzNHn--PifnwNUQS0g7skQ1-38mgnYTIUV_SE3RCwBCipuB7S5hQbNM19Ldn9bFwZlyDTkw3EIafNvWSDky0JMyHjM7V1FfdVZ_d1GUv8YL17hKRWYFTwwyeRltpXj-yco3hyQexpz3e2xkWaUVium93pjoeTbOfnKB6VG9mx8G6GhoHVfHM72W-QvFSi4sAtdpLzT23Hz-RlADUxtcS6vu6MtffD0AgQNP5b4apDZkfANHLTIvwdTv5Kuf44OjSfKx5Fnrg8n=w382-h678-no" width="360" height="640" />
+<img src="https://lh3.googleusercontent.com/O4DlaheQZM_s-xC85sF-AJIGmSpNFRuZFEtNClCimRDRnrk3zGEfumJrn9J75jtS5A53PMi5FiinH-S-D7nMwe4XdHbwPnWvGGuECdMA5aUPt5vB1_wMVa9kDZhf7BHJ3rxGORqIhKk5LcyOMuMj5dN5tB80KPgJ4YjQvk3P4EI8HMpP9FRhTBCfDqQzxNbl9qLFaos89YJzuwL6w30-GIFYhuHzO8I7s-kR5NZ5ocbVuhCGWqlnkcGJUUApOvll5410RBQmIUIdJg2goxDZatITYiBSpuzPFgSST1LqphZwpjnxcNYqvHNqScqyGWvLLqbpeQ5_a6JrtOSo0EtTrfh7C_lDIcg_RA9gatAo5_4WfJiTZw6tHVAXItUvr8aBIokjVebn6XXP6PUWOp1oj30_PgQ-XGe56mE2RSAYfiEWIefHixJrqwg3IEQ60JFeHUxnwWY-rptVew6s3SF2m81p1_Z3A1x-cuZrUmwHPLcDV2s7mxTQxyt7QeEWXbAd4foznBvpBeIH1n2iuAvFUG16QrMptpwxigkPi1R8kmhCWDRqMox14ZWe7-5IJuMFlAab=w382-h678-no" width="360" height="640" />
 
 #### 1) prev_btn_section
 #### 2) next_btn_section
@@ -189,7 +189,7 @@ The first screen shot shows the popup and the second shows the modal of this plu
 #### 10) today
 
 ###modal
-<img src="https://lh3.googleusercontent.com/2pecq5vgy3FNse1_8nYVD66DvgGI5sW0QEU53fuGxQO9PrZkLnYaM21bTIh-LiUTEZCW_yfzguhUoTpYL7CLWF6e4vwvvk84RQ9alcoEl6wvE-SDNxjZP2_DG3RGkDnG1ZsVzxq6EVK9t0vPOZgLDHf7XubGIIPmdcOUTsmG0VrB_FRCcepAGNeJmppg2RkdYHCqQADHqEn9zHZeOuD4pO-pDcq9oQc96tdw3hNMTtLa3MSdX45Lbca4pY2n-bXrAIjXnz9OReCRvg35r5NCD9JfGi2agvIB5Uthb1XOKt5rWdtYWSzM4zZDfzzmwqxMJkOSOpY-Vaxk10WB7TyO-Lh-IIJjFEOVJhLajhaA1BNDuIo9Tzbez__3ZAjNNzexfr6Pq6ZE5exKyZq3fW9qj8wfGRIBkrPLwYqD0l1V7GNZLet6Q4JkBb923be5bkuemelcOV2_TuL8zjamXaXfSEQOgY-UaK1dDZrhY_tgFfVnaOo9TrZxDT0FeZFsrvwXqv_3d8xRVPUSfGxoHESubxPWVQUrau6LU0R6SPIduLvxsFiOvt5OTT5Igcm6f5ooaLL8=w382-h678-no" width="360" height="640" />
+<img src="https://lh3.googleusercontent.com/tbNgGKK0QtKxVBfRr8NlYhQy6iSKDtagbDispAMNoE8a72Eyq102Bn2qnX5mQmmgxZGho5xWK0fx6ZoG0lPKYiG-pGzzhBE8NLeGH8lCu1tTVrk8FiyRaOmyycBRJft1gURavyCA0nLFd_tFrHdmVyxOXD7IIy2mncc7tnMQIIDXTH99Rb1Hkd0GOF9-UvCLMjEld361VDZsmZUamJ79dlv_u4gyPmBMfG9Q6vmh2uOVai_mfKQ8M6mKRDzq9venYp-UEU-S9LVy3VI4kaftHYlNsSggVd0b1q2PWpCMjGEMGmdYY5XXcGYvumefmZypjBCmas_M_86IU9aZYU07Z9DKnIl1NBQNpFSAv_T0Z-urto5I-y6o6gz3BYn8jh_u5_YEgeva5iyOJIqJwg1cynjlmGoampRt2ajyGQb93GZkLjB1C7J-ERFZWgeXaXbHPmVVLGWFI7nH40QohHMQbAGB1JwmsbVP8qe1OnzlNXrEdy6jdphCP3rBqFSigkd1JMbejwcQcCfoP9xFFSPh0n6cUqBTukY7y0RskLVddwiNQLFbtRL_hebCQLqmUwsETUY9=w382-h678-no" width="360" height="640" />
 
 #### 1) left_arrow
 #### 2) right_arrow
@@ -197,6 +197,14 @@ The first screen shot shows the popup and the second shows the modal of this plu
 Other classes are same as the popup classes. You can use any one of the below classes to customise popup and modal css respectively.  
 ####ionic_datepicker_popup
 ####ionic_datepicker_modal
+
+The css class names for the buttons are as follows
+
+a) For `Set` button the class name is `button_set` 
+
+b) For `Today` button the class name is `button_today`
+ 
+c) For `Close` button the class name is `button_close` 
 
 ##Versions:
 
@@ -322,6 +330,14 @@ Few more features are also added apart from the above mentioned features.
 [Bug#166](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/166),
 [Bug#168](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/168),
 [Bug#171](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/171)
+
+### 13) v1.1.0
+
+**BugFixes**
+
+[Bug#178](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/178),
+[Bug#179](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/179),
+[Bug#180](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/180)
 
 
 ##License:

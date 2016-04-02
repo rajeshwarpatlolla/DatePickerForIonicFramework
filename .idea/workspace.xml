@@ -2,7 +2,104 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ace36d88-58a7-4b08-8338-cf6fdceac500" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/css/ionic.app.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/css/ionic.app.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/adam.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/ben.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/ionic.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/max.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/mike.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/img/perry.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/LICENSE.MD" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/dist/ionic-datepicker.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker-modal.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker-popup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker.provider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker.service.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic-datepicker/src/ionic-datepicker.styles.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/css/ionic.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/css/ionic.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/fonts/ionicons.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/fonts/ionicons.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/fonts/ionicons.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/fonts/ionicons.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular-ui/angular-ui-router.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular-ui/angular-ui-router.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-animate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-animate.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-sanitize.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular-sanitize.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic-angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic-angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic.bundle.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/js/ionic.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_action-sheet.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_animations.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_backdrop.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_badge.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_bar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_button-bar.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_button.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_checkbox.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_form.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_grid.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_items.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_list.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_loading.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_menu.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_mixins.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_modal.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_platform.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_popover.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_popup.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_progress.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_radio.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_range.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_refresher.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_reset.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_scaffolding.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_select.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_slide-box.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_slides.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_spinner.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_tabs.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_toggle.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_transitions.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_type.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_util.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/_variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/ionic.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/ionicons/_ionicons-font.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/ionicons/_ionicons-icons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/ionicons/_ionicons-variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/scss/ionicons/ionicons.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/lib/ionic/version.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.config.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.controllers.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.factories.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.module.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.provider.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.route.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.run.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/app.services.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/templates/tab-contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/templates/tab-home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/templates/tab-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/modules/app/templates/tabs.html" afterPath="" />
     </list>
     <ignored path="DatePickerForIonicFramework.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -119,6 +216,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -139,8 +238,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,7 +318,6 @@
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.568082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -235,6 +331,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -268,7 +365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -276,7 +372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

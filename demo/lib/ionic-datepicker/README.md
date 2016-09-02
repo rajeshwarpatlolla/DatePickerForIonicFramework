@@ -5,6 +5,8 @@
 This is an `ionic-datepicker` bower component, which can be used in any Ionic framework's application. No additional plugins required for this component.
 This plugin is completely open source. Please rate this plugin @ [Ionic Market](http://market.ionic.io/plugins/ionicdatepicker)
 
+From version 1.0.0, this component has got so many new features and the way you should use is different from the older versions of this component. If you wish to see the documentation for the previous versions of this component, please check the [previous releases](https://github.com/rajeshwarpatlolla/ionic-datepicker/releases)
+
 [View Demo](http://rajeshwarpatlolla.github.io/DatePickerForIonicFramework/demo/ "Demo")
 
 ##Prerequisites.
@@ -52,12 +54,12 @@ Your config method may look like this if you wish to setup the configuration. Bu
       weeksList: ["S", "M", "T", "W", "T", "F", "S"],
       monthsList: ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
       templateType: 'popup',
-      from: new Date(2012, 8, 1)
-      to: new Date(2018, 8, 1)
+      from: new Date(2012, 8, 1),
+      to: new Date(2018, 8, 1),
       showTodayButton: true,
       dateFormat: 'dd MMMM yyyy',
       closeOnSelect: false,
-      disableWeekdays: [6],
+      disableWeekdays: [6]
     };
     ionicDatePickerProvider.configDatePicker(datePickerObj);
   })
@@ -121,6 +123,7 @@ The properties you can configure are as follows.
 **o) disableWeekdays**(Optional) : Accepts array of numbers starting from 0(Sunday) to 6(Saturday). If you specify any values for this array, then it will disable that week day in the whole calendar. For example if you pass [0,6], then all the Sundays and Saturdays will be disabled.
 
 5) Inject `ionicDatePicker` in the controller, where you wish to use this component. Then using the below method you can call the datepicker.
+
 ````javascript
 .controller('HomeCtrl', function ($scope, ionicDatePicker) {
 
@@ -331,13 +334,19 @@ Few more features are also added apart from the above mentioned features.
 [Bug#168](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/168),
 [Bug#171](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/171)
 
-### 13) v1.1.0
+### 14) v1.1.0
 
 **BugFixes**
 
 [Bug#178](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/178),
 [Bug#179](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/179),
 [Bug#180](https://github.com/rajeshwarpatlolla/ionic-datepicker/issues/180)
+
+### 15) v1.2.0
+
+Lots of bug fixes. Lots of PR's merged.
+
+CSS changes for popup, so that all the dates of all the months fits in the specified height.
 
 
 ##License:

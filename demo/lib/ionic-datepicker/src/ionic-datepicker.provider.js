@@ -27,6 +27,7 @@ angular.module('ionic-datepicker.provider', [])
       var $scope = $rootScope.$new();
       $scope.today = resetHMSM(new Date()).getTime();
       $scope.disabledDates = [];
+      $scope.data = {};
 
       //Reset the hours, minutes, seconds and milli seconds
       function resetHMSM(currentDate) {
@@ -43,8 +44,8 @@ angular.module('ionic-datepicker.provider', [])
           $scope.currentDate.setFullYear($scope.currentDate.getFullYear());
         }
         $scope.currentDate.setMonth($scope.currentDate.getMonth() - 1);
-        $scope.currentMonth = $scope.mainObj.monthsList[$scope.currentDate.getMonth()];
-        $scope.currentYear = $scope.currentDate.getFullYear();
+        $scope.data.currentMonth = $scope.mainObj.monthsList[$scope.currentDate.getMonth()];
+        $scope.data.currentYear = $scope.currentDate.getFullYear();
         refreshDateList($scope.currentDate);
       };
 
@@ -55,8 +56,8 @@ angular.module('ionic-datepicker.provider', [])
         }
         $scope.currentDate.setDate(1);
         $scope.currentDate.setMonth($scope.currentDate.getMonth() + 1);
-        $scope.currentMonth = $scope.mainObj.monthsList[$scope.currentDate.getMonth()];
-        $scope.currentYear = $scope.currentDate.getFullYear();
+        $scope.data.currentMonth = $scope.mainObj.monthsList[$scope.currentDate.getMonth()];
+        $scope.data.currentYear = $scope.currentDate.getFullYear();
         refreshDateList($scope.currentDate);
       };
 
@@ -153,10 +154,10 @@ angular.module('ionic-datepicker.provider', [])
         $scope.rows = [0, 7, 14, 21, 28, 35];
         $scope.cols = [0, 1, 2, 3, 4, 5, 6];
 
-        $scope.currentMonth = $scope.mainObj.monthsList[currentDate.getMonth()];
-        $scope.currentYear = currentDate.getFullYear();
-        $scope.currentMonthSelected = angular.copy($scope.currentMonth);
-        $scope.currentYearSelected = angular.copy($scope.currentYear);
+        $scope.data.currentMonth = $scope.mainObj.monthsList[currentDate.getMonth()];
+        $scope.data.currentYear = currentDate.getFullYear();
+        $scope.data.currentMonthSelected = angular.copy($scope.data.currentMonth);
+        $scope.currentYearSelected = angular.copy($scope.data.currentYear);
         $scope.numColumns = 7;
       }
 
@@ -187,12 +188,11 @@ angular.module('ionic-datepicker.provider', [])
           $scope.weeksList.push($scope.mainObj.weeksList.shift());
         }
         $scope.disableWeekdays = $scope.mainObj.disableWeekdays;
-
         refreshDateList($scope.mainObj.inputDate);
         setDisabledDates($scope.mainObj);
       }
 
-      $ionicModal.fromTemplateUrl('ionic-datepicker-modal.html', {
+      $ionicModal.fromTemplateUrl('lib/ionic-datepicker/src/ionic-datepicker-modal.html', {
         scope: $scope,
         animation: 'slide-in-up'
       }).then(function (modal) {
@@ -218,6 +218,9 @@ angular.module('ionic-datepicker.provider', [])
       //Open datepicker popup
       provider.openDatePicker = function (ipObj) {
         var buttons = [];
+        delete $scope.fromDate;
+        delete $scope.toDate;
+
         $scope.mainObj = angular.extend({}, config, ipObj);
         if ($scope.mainObj.from) {
           $scope.fromDate = resetHMSM(new Date($scope.mainObj.from)).getTime();
@@ -229,6 +232,7 @@ angular.module('ionic-datepicker.provider', [])
         if (ipObj.disableWeekdays && config.disableWeekdays) {
           $scope.mainObj.disableWeekdays = ipObj.disableWeekdays.concat(config.disableWeekdays);
         }
+        console.log('$scope.mainObj.disableWeekdays',$scope.mainObj.disableWeekdays);
         setInitialObj($scope.mainObj);
 
         if (!$scope.mainObj.closeOnSelect) {
@@ -266,7 +270,7 @@ angular.module('ionic-datepicker.provider', [])
 
         if ($scope.mainObj.templateType.toLowerCase() == 'popup') {
           $scope.popup = $ionicPopup.show({
-            templateUrl: 'ionic-datepicker-popup.html',
+            templateUrl: 'lib/ionic-datepicker/src/ionic-datepicker-popup.html',
             scope: $scope,
             cssClass: 'ionic_datepicker_popup',
             buttons: buttons

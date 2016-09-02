@@ -14,7 +14,7 @@ angular.module('starter')
       showTodayButton: true,
       dateFormat: 'dd MMM yyyy',
       closeOnSelect: false,
-      disableWeekdays: [6],
+      disableWeekdays: [],
       from: new Date(2015, 8, 1)
     };
 

@@ -50,7 +50,7 @@ angular.module('starter.controllers', [])
         to: new Date(2018, 8, 25),
         inputDate: new Date(),
         mondayFirst: true,
-        disableWeekdays: [],
+        disableWeekdays: [0, 6],
         showTodayButton: false,
         closeOnSelect: false,
         templateType: 'modal'

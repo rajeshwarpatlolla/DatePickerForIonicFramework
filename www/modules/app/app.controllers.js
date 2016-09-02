@@ -21,10 +21,10 @@ angular.module('starter.controllers', [])
           new Date(1439676000000)
         ],
         from: new Date(2012, 1, 1),
-        to: new Date(2016, 10, 30),
+        to: new Date(2018, 10, 30),
         inputDate: new Date(),
         mondayFirst: true,
-        disableWeekdays: [0],
+        disableWeekdays: [],
         closeOnSelect: false,
         templateType: 'popup'
       };
@@ -47,9 +47,10 @@ angular.module('starter.controllers', [])
           new Date(1456511400000)
         ],
         from: new Date(2012, 8, 2),
-        to: new Date(2016, 8, 25),
+        to: new Date(2018, 8, 25),
         inputDate: new Date(),
         mondayFirst: true,
+        disableWeekdays: [],
         showTodayButton: false,
         closeOnSelect: false,
         templateType: 'modal'
